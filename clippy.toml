@@ -1,0 +1,7 @@
+too-many-arguments-threshold = 10
+allow-expect-in-tests = true
+allow-unwrap-in-tests = true
+# Public crate published on crates.io: never suggest changes that would break the exported API
+avoid-breaking-exported-api = true
+allow-print-in-tests = false
+doc-valid-idents = ["Discogs", "OAuth", ".."]

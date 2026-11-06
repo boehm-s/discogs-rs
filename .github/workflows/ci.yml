@@ -1,0 +1,184 @@
+# Branch flow:
+#   PR -> integration      : lint + tests (this workflow)
+#   push on integration    : lint + tests + live tests, then fast-forward master to the tested commit
+#   push on master         : publish to crates.io (release.yml)
+# master is protected: only the `promote` job (via the MASTER_DEPLOY_KEY deploy key) can update it.
+name: CI
+
+on:
+  pull_request:
+    branches: [integration, master]
+  push:
+    branches: [integration]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  # Like `interruptible: true` on GitLab: a new push on a PR cancels the previous run.
+  # Runs on integration are never cancelled, so each merged commit gets promoted in order.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: 0
+  RUST_BACKTRACE: 1
+
+jobs:
+  # master only receives commits from CI
+  pr-target:
+    name: PR target
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refuse pull requests targeting master
+        if: github.base_ref == 'master'
+        run: |
+          echo "::error::master is updated by CI only. Open your pull request against integration."
+          exit 1
+      - run: echo "Targeting ${{ github.base_ref }}"
+
+  lint:
+    name: Lint (fmt, clippy, doc)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      # Installs the toolchain pinned in rust-toolchain.toml and caches ~/.cargo + target/
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          rustflags: ""
+      - name: rustfmt
+        run: cargo fmt --all -- --check
+      - name: clippy
+        run: cargo clippy --no-deps --all-features --tests -- -D warnings
+      - name: rustdoc
+        run: cargo doc --no-deps --all-features
+        env:
+          RUSTDOCFLAGS: -D warnings
+
+  deny:
+    name: Dependencies (cargo-deny)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: EmbarkStudios/cargo-deny-action@v2
+        with:
+          command: check --hide-inclusion-graph licenses sources advisories bans
+
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          rustflags: ""
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-nextest
+      - name: Unit and integration tests
+        run: cargo nextest run --all-features --cargo-profile ci --profile ci
+      # nextest does not run doctests
+      - name: Doctests
+        run: cargo test --all-features --profile ci --doc
+
+  msrv:
+    name: MSRV
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Read rust-version from Cargo.toml
+        id: msrv
+        run: echo "version=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[0].rust_version')" >> "$GITHUB_OUTPUT"
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          toolchain: ${{ steps.msrv.outputs.version }}
+          rustflags: ""
+          override: true
+      # Only the library itself: dev-dependencies are allowed to require a newer compiler
+      - run: cargo +${{ steps.msrv.outputs.version }} check --all-features --lib
+
+  package:
+    name: Package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          rustflags: ""
+      # Builds the .crate exactly as crates.io would receive it
+      - run: cargo package
+
+  # The public API must not break
+  # without the right version bump in Cargo.toml.
+  semver:
+    name: Semver checks
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          rustflags: ""
+      - name: Is the crate already on crates.io?
+        id: published
+        run: |
+          name=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[0].name')
+          status=$(curl -s -o /dev/null -w '%{http_code}' -A "${name}-ci (github.com/${GITHUB_REPOSITORY})" "https://crates.io/api/v1/crates/${name}")
+          echo "published=$([ "$status" = 200 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - uses: taiki-e/install-action@v2
+        if: steps.published.outputs.published == 'true'
+        with:
+          tool: cargo-semver-checks
+      - if: steps.published.outputs.published == 'true'
+        run: cargo semver-checks check-release --all-features
+      - if: steps.published.outputs.published != 'true'
+        run: echo "Crate not published yet, nothing to compare against"
+
+  # Tests hitting the real Discogs API (`#[ignore]`d tests). Only on integration:
+  # secrets are not available to PRs from forks, and it spares the API rate limit.
+  test-live:
+    name: Live tests (Discogs API)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/integration'
+    runs-on: ubuntu-latest
+    environment: integration
+    env:
+      DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          rustflags: ""
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-nextest
+      - name: Live tests
+        run: |
+          if [ -z "$DISCOGS_TOKEN" ]; then
+            echo "::warning::DISCOGS_TOKEN secret is not set, live tests skipped"
+            exit 0
+          fi
+          cargo nextest run --all-features --cargo-profile ci --profile ci --run-ignored only --no-tests=pass
+
+  # Once everything is green on integration,
+  # fast-forward master to the tested commit. This triggers release.yml.
+  promote:
+    name: Promote to master
+    if: github.event_name == 'push' && github.ref == 'refs/heads/integration'
+    needs: [lint, deny, test, msrv, package, test-live]
+    runs-on: ubuntu-latest
+    # Only one promotion at a time
+    concurrency:
+      group: git-master
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # Deploy key allowed to bypass the master ruleset. A push made with it (unlike
+          # GITHUB_TOKEN) triggers the release workflow.
+          ssh-key: ${{ secrets.MASTER_DEPLOY_KEY }}
+          fetch-depth: 0
+      # No force push: fails if master is not an ancestor of this commit
+      - run: git push origin "${GITHUB_SHA}:refs/heads/master"

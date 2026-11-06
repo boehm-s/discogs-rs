@@ -1,0 +1,76 @@
+# Runs when CI fast-forwards master (see ci.yml `promote`).
+# Publishes to crates.io when the version in Cargo.toml is not published yet, then tags
+# the commit `vX.Y.Z` and creates the GitHub release. A merge without a version bump
+# publishes nothing.
+name: Release
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  publish:
+    name: Publish to crates.io
+    runs-on: ubuntu-latest
+    environment: crates-io
+    permissions:
+      contents: write # tag + GitHub release
+      id-token: write # crates.io trusted publishing
+    env:
+      CARGO_REGISTRY_TOKEN_SECRET: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          rustflags: ""
+
+      - name: Read crate name and version
+        id: crate
+        run: |
+          metadata=$(cargo metadata --no-deps --format-version 1)
+          echo "name=$(jq -r '.packages[0].name' <<< "$metadata")" >> "$GITHUB_OUTPUT"
+          echo "version=$(jq -r '.packages[0].version' <<< "$metadata")" >> "$GITHUB_OUTPUT"
+
+      - name: Is this version already on crates.io?
+        id: published
+        run: |
+          status=$(curl -s -o /dev/null -w '%{http_code}' \
+            -A "${{ steps.crate.outputs.name }}-release-ci (github.com/${GITHUB_REPOSITORY})" \
+            "https://crates.io/api/v1/crates/${{ steps.crate.outputs.name }}/${{ steps.crate.outputs.version }}")
+          if [ "$status" = 200 ]; then
+            echo "Version ${{ steps.crate.outputs.version }} is already published, nothing to release"
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Trusted publishing (OIDC, no long-lived token). Needs the crate to exist on crates.io
+      # with this repository configured as trusted publisher. For the very first publish,
+      # set the CARGO_REGISTRY_TOKEN secret instead (and remove it afterwards).
+      - name: Authenticate to crates.io
+        id: auth
+        if: steps.published.outputs.published == 'false' && env.CARGO_REGISTRY_TOKEN_SECRET == ''
+        uses: rust-lang/crates-io-auth-action@v1
+
+      - name: Publish
+        if: steps.published.outputs.published == 'false'
+        run: cargo publish
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token || secrets.CARGO_REGISTRY_TOKEN }}
+
+      - name: Tag and create GitHub release
+        if: steps.published.outputs.published == 'false'
+        run: gh release create "v${{ steps.crate.outputs.version }}" --target "$GITHUB_SHA" --title "v${{ steps.crate.outputs.version }}" --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}
