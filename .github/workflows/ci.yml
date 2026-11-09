@@ -1,13 +1,13 @@
 # Branch flow:
 #   PR -> integration      : lint + tests (this workflow)
-#   push on integration    : lint + tests + live tests, then fast-forward master to the tested commit
-#   push on master         : publish to crates.io (release.yml)
-# master is protected: only the `promote` job (via the MASTER_DEPLOY_KEY deploy key) can update it.
+#   push on integration    : lint + tests + live tests, then fast-forward main to the tested commit
+#   push on main           : publish to crates.io (release.yml)
+# main is protected: only the `promote` job (via the MAIN_DEPLOY_KEY deploy key) can update it.
 name: CI
 
 on:
   pull_request:
-    branches: [integration, master]
+    branches: [integration, main]
   push:
     branches: [integration]
   workflow_dispatch:
@@ -27,16 +27,16 @@ env:
   RUST_BACKTRACE: 1
 
 jobs:
-  # master only receives commits from CI
+  # main only receives commits from CI
   pr-target:
     name: PR target
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - name: Refuse pull requests targeting master
-        if: github.base_ref == 'master'
+      - name: Refuse pull requests targeting main
+        if: github.base_ref == 'main'
         run: |
-          echo "::error::master is updated by CI only. Open your pull request against integration."
+          echo "::error::main is updated by CI only. Open your pull request against integration."
           exit 1
       - run: echo "Targeting ${{ github.base_ref }}"
 
@@ -163,22 +163,31 @@ jobs:
           cargo nextest run --all-features --cargo-profile ci --profile ci --run-ignored only --no-tests=pass
 
   # Once everything is green on integration,
-  # fast-forward master to the tested commit. This triggers release.yml.
+  # fast-forward main to the tested commit. This triggers release.yml.
   promote:
-    name: Promote to master
+    name: Promote to main
     if: github.event_name == 'push' && github.ref == 'refs/heads/integration'
     needs: [lint, deny, test, msrv, package, test-live]
     runs-on: ubuntu-latest
     # Only one promotion at a time
     concurrency:
-      group: git-master
+      group: git-main
       cancel-in-progress: false
     steps:
+      # Without the key, checkout silently falls back to GITHUB_TOKEN, which cannot push to main
+      - name: Check the deploy key is available
+        env:
+          MAIN_DEPLOY_KEY: ${{ secrets.MAIN_DEPLOY_KEY }}
+        run: |
+          if [ -z "$MAIN_DEPLOY_KEY" ]; then
+            echo "::error::The MAIN_DEPLOY_KEY secret is missing. Add it as a repository secret (not an environment secret)."
+            exit 1
+          fi
       - uses: actions/checkout@v5
         with:
-          # Deploy key allowed to bypass the master ruleset. A push made with it (unlike
+          # Deploy key allowed to bypass the main ruleset. A push made with it (unlike
           # GITHUB_TOKEN) triggers the release workflow.
-          ssh-key: ${{ secrets.MASTER_DEPLOY_KEY }}
+          ssh-key: ${{ secrets.MAIN_DEPLOY_KEY }}
           fetch-depth: 0
-      # No force push: fails if master is not an ancestor of this commit
-      - run: git push origin "${GITHUB_SHA}:refs/heads/master"
+      # No force push: fails if main is not an ancestor of this commit
+      - run: git push origin "${GITHUB_SHA}:refs/heads/main"
