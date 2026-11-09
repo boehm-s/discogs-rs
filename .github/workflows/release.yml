@@ -1,4 +1,4 @@
-# Runs when CI fast-forwards master (see ci.yml `promote`).
+# Runs when CI fast-forwards main (see ci.yml `promote`).
 # Publishes to crates.io when the version in Cargo.toml is not published yet, then tags
 # the commit `vX.Y.Z` and creates the GitHub release. A merge without a version bump
 # publishes nothing.
@@ -6,7 +6,7 @@ name: Release
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
