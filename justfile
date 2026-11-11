@@ -1,4 +1,4 @@
-# Load .env file (DISCOGS_TOKEN for live tests)
+# Load .env file
 set dotenv-load
 
 default:
@@ -6,20 +6,20 @@ default:
 
 # Build the crate
 build *ARGS:
-    cargo build --all-features {{ ARGS }}
+    cargo build {{ ARGS }}
 
 # Check the code (including tests)
 check:
-    cargo check --all-features --tests
+    cargo check --tests
 
 # Run unit tests and doctests
 test *ARGS:
-    cargo nextest run --all-features --failure-output final --success-output never {{ ARGS }}
-    cargo test --all-features --doc
+    cargo nextest run --failure-output final --success-output never {{ ARGS }}
+    cargo test --doc
 
-# Run the live tests against the real Discogs API (needs DISCOGS_TOKEN)
+# Run the tests against the real Discogs API (needs DISCOGS_TOKEN in .env)
 test-live *ARGS:
-    cargo nextest run --all-features --run-ignored only --no-tests=pass {{ ARGS }}
+    cargo nextest run --features live-tests -E 'test(live_tests)' {{ ARGS }}
 
 # Format the code
 fmt:
@@ -28,9 +28,9 @@ fmt:
 # Run every check done by the CI lint job
 lint:
     cargo fmt --all -- --check
-    cargo clippy --no-deps --all-features --tests -- -D warnings
+    cargo clippy --no-deps --tests -- -D warnings
     cargo deny check --hide-inclusion-graph licenses sources advisories bans
-    RUSTDOCFLAGS="-D warnings" cargo doc --no-deps --all-features
+    RUSTDOCFLAGS="-D warnings" cargo doc --no-deps
 
 # Check the public API against the latest version published on crates.io
 semver:
@@ -38,7 +38,7 @@ semver:
 
 # Build and open the documentation
 doc:
-    cargo doc --no-deps --all-features --open
+    cargo doc --no-deps --open
 
 # Check that the crate can be packaged for crates.io
 package:

@@ -1,6 +1,6 @@
 # Branch flow:
 #   PR -> integration      : lint + tests (this workflow)
-#   push on integration    : lint + tests + live tests, then fast-forward main to the tested commit
+#   push on integration    : lint + tests, then fast-forward main to the tested commit
 #   push on main           : publish to crates.io (release.yml)
 # main is protected: only the `promote` job (via the MAIN_DEPLOY_KEY deploy key) can update it.
 name: CI
@@ -52,9 +52,9 @@ jobs:
       - name: rustfmt
         run: cargo fmt --all -- --check
       - name: clippy
-        run: cargo clippy --no-deps --all-features --tests -- -D warnings
+        run: cargo clippy --no-deps --tests -- -D warnings
       - name: rustdoc
-        run: cargo doc --no-deps --all-features
+        run: cargo doc --no-deps
         env:
           RUSTDOCFLAGS: -D warnings
 
@@ -79,10 +79,10 @@ jobs:
         with:
           tool: cargo-nextest
       - name: Unit and integration tests
-        run: cargo nextest run --all-features --cargo-profile ci --profile ci
+        run: cargo nextest run --cargo-profile ci --profile ci
       # nextest does not run doctests
       - name: Doctests
-        run: cargo test --all-features --profile ci --doc
+        run: cargo test --profile ci --doc
 
   msrv:
     name: MSRV
@@ -98,7 +98,7 @@ jobs:
           rustflags: ""
           override: true
       # Only the library itself: dev-dependencies are allowed to require a newer compiler
-      - run: cargo +${{ steps.msrv.outputs.version }} check --all-features --lib
+      - run: cargo +${{ steps.msrv.outputs.version }} check --lib
 
   package:
     name: Package
@@ -133,41 +133,16 @@ jobs:
         with:
           tool: cargo-semver-checks
       - if: steps.published.outputs.published == 'true'
-        run: cargo semver-checks check-release --all-features
+        run: cargo semver-checks check-release
       - if: steps.published.outputs.published != 'true'
         run: echo "Crate not published yet, nothing to compare against"
-
-  # Tests hitting the real Discogs API (`#[ignore]`d tests). Only on integration:
-  # secrets are not available to PRs from forks, and it spares the API rate limit.
-  test-live:
-    name: Live tests (Discogs API)
-    if: github.event_name == 'push' && github.ref == 'refs/heads/integration'
-    runs-on: ubuntu-latest
-    environment: integration
-    env:
-      DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions-rust-lang/setup-rust-toolchain@v2
-        with:
-          rustflags: ""
-      - uses: taiki-e/install-action@v2
-        with:
-          tool: cargo-nextest
-      - name: Live tests
-        run: |
-          if [ -z "$DISCOGS_TOKEN" ]; then
-            echo "::warning::DISCOGS_TOKEN secret is not set, live tests skipped"
-            exit 0
-          fi
-          cargo nextest run --all-features --cargo-profile ci --profile ci --run-ignored only --no-tests=pass
 
   # Once everything is green on integration,
   # fast-forward main to the tested commit. This triggers release.yml.
   promote:
     name: Promote to main
     if: github.event_name == 'push' && github.ref == 'refs/heads/integration'
-    needs: [lint, deny, test, msrv, package, test-live]
+    needs: [lint, deny, test, msrv, package]
     runs-on: ubuntu-latest
     # Only one promotion at a time
     concurrency:

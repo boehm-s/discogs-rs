@@ -15,9 +15,11 @@ cargo install --locked cargo-nextest cargo-deny cargo-semver-checks
 
 ## Tests
 
-- `just test`: unit tests and doctests, no network
-- `just test-live`: tests hitting the real Discogs API. Mark them `#[ignore = "live: hits the Discogs API"]`.
-  They read `DISCOGS_TOKEN` from `.env` (see `.env.model`)
+- `just test`: unit tests and doctests. They never call the Discogs API: requests go to a
+  [`wiremock`](https://docs.rs/wiremock) server answering with real Discogs responses stored in
+  `resources/` (personal data anonymized). Tests sit at the bottom of the file they test.
+- `just test-live`: tests against the real Discogs API, behind the `live-tests` feature. They
+  need `DISCOGS_TOKEN` in `.env` and never run in the CI.
 
 ## Branches and release flow
 
@@ -29,7 +31,7 @@ feature branch ──PR──▶ integration ──(CI, automatic)──▶ main
 | Event | Jobs |
 |---|---|
 | Pull request → `integration` | fmt, clippy, rustdoc, cargo-deny, tests, MSRV, `cargo package`, semver checks |
-| Push on `integration` (merged PR) | same checks + live tests, then **promote**: fast-forwards `main` to the tested commit |
+| Push on `integration` (merged PR) | same checks, then **promote**: fast-forwards `main` to the tested commit |
 | Push on `main` | **release**: if the `Cargo.toml` version is not on crates.io yet, `cargo publish`, tag `vX.Y.Z`, GitHub release |
 
 - `main` is protected: nobody can push or merge into it, only the CI promote job (deploy key).
