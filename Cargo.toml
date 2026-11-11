@@ -1,6 +1,6 @@
 [package]
 name = "discogs-client"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 rust-version = "1.85"
 description = "Ergonomic, async Rust client for the Discogs API"
@@ -12,15 +12,31 @@ readme = "README.md"
 keywords = ["discogs", "api", "client", "music", "vinyl"]
 categories = ["api-bindings", "web-programming::http-client"]
 # Keep the published package small: only what is needed to build the crate
-include = ["src/**/*", "Cargo.toml", "README.md", "LICENSE", "CHANGELOG.md"]
+include = ["src/**/*", "resources/**/*", "Cargo.toml", "README.md", "LICENSE", "CHANGELOG.md"]
 
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
+[features]
+# Tests against the real Discogs API (`just test-live`), never run in the CI
+live-tests = []
+
 [dependencies]
+mime = "0.3"
+oauth1-request = { version = "0.6", default-features = false, features = ["std", "hmac-sha1"] }
+reqwest = { version = "0.13", features = ["json", "form", "query"] }
+secrecy = { version = "0.10", features = ["serde"] }
+serde = { version = "1", features = ["derive"] }
+serde_urlencoded = "0.7"
+thiserror = "2"
+tracing = { version = "0.1", features = ["attributes"] }
+url = "2"
 
 [dev-dependencies]
+serde_json = "1"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+wiremock = "0.6"
 
 # Used by CI (`cargo nextest run --cargo-profile ci`): faster builds, still usable backtraces
 [profile.ci]
@@ -32,7 +48,7 @@ debug = "line-tables-only"
 unsafe_code = "forbid"
 # let_underscore_drop = "warn" false positives I think
 macro_use_extern_crate = "warn"
-missing_docs = "warn" # public crate: every public item must be documented
+# missing_docs = "warn" so many warnings...
 non_ascii_idents = "warn"
 noop_method_call = "warn"
 unreachable_pub = "warn"
