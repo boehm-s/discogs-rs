@@ -44,9 +44,9 @@ jobs:
     name: Lint (fmt, clippy, doc)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       # Installs the toolchain pinned in rust-toolchain.toml and caches ~/.cargo + target/
-      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - uses: actions-rust-lang/setup-rust-toolchain@v2
         with:
           rustflags: ""
       - name: rustfmt
@@ -62,7 +62,7 @@ jobs:
     name: Dependencies (cargo-deny)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: EmbarkStudios/cargo-deny-action@v2
         with:
           command: check --hide-inclusion-graph licenses sources advisories bans
@@ -71,8 +71,8 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - uses: actions/checkout@v7
+      - uses: actions-rust-lang/setup-rust-toolchain@v2
         with:
           rustflags: ""
       - uses: taiki-e/install-action@v2
@@ -88,11 +88,11 @@ jobs:
     name: MSRV
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Read rust-version from Cargo.toml
         id: msrv
         run: echo "version=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[0].rust_version')" >> "$GITHUB_OUTPUT"
-      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - uses: actions-rust-lang/setup-rust-toolchain@v2
         with:
           toolchain: ${{ steps.msrv.outputs.version }}
           rustflags: ""
@@ -104,8 +104,8 @@ jobs:
     name: Package
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - uses: actions/checkout@v7
+      - uses: actions-rust-lang/setup-rust-toolchain@v2
         with:
           rustflags: ""
       # Builds the .crate exactly as crates.io would receive it
@@ -118,8 +118,8 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - uses: actions/checkout@v7
+      - uses: actions-rust-lang/setup-rust-toolchain@v2
         with:
           rustflags: ""
       - name: Is the crate already on crates.io?
@@ -147,8 +147,8 @@ jobs:
     env:
       DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - uses: actions/checkout@v7
+      - uses: actions-rust-lang/setup-rust-toolchain@v2
         with:
           rustflags: ""
       - uses: taiki-e/install-action@v2
@@ -183,7 +183,7 @@ jobs:
             echo "::error::The MAIN_DEPLOY_KEY secret is missing. Add it as a repository secret (not an environment secret)."
             exit 1
           fi
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           # Deploy key allowed to bypass the main ruleset. A push made with it (unlike
           # GITHUB_TOKEN) triggers the release workflow.
