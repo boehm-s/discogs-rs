@@ -69,7 +69,7 @@
 //! # Tracing
 //!
 //! Endpoint calls and HTTP requests emit [`tracing`](https://docs.rs/tracing) spans (method, URL,
-//! status, never secrets). Install a subscriber in your application to collect them.
+//! status). Install a subscriber in your application to collect them.
 
 pub mod auth;
 pub mod client;
