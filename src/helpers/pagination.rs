@@ -33,7 +33,8 @@ pub struct PaginationDetails {
   pub page: u32,
   #[serde(rename = "pages")]
   pub pages_count: u32,
-  pub items: u32,
+  #[serde(rename = "items")]
+  pub items_count: u32,
   #[serde(rename = "per_page")]
   pub number_of_items_per_page: u32,
 }
@@ -126,7 +127,7 @@ mod tests {
   fn deserialize_reads_the_collection_key() {
     let page: PaginatedResponse<Entry> = serde_json::from_str(PAGE).unwrap();
     assert_eq!(page.results, [Entry { id: 7 }]);
-    assert_eq!((page.pagination.page, page.pagination.items), (2, 3));
+    assert_eq!((page.pagination.page, page.pagination.items_count), (2, 3));
   }
 
   #[test]

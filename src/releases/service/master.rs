@@ -132,7 +132,7 @@ mod tests {
         pagination.page,
         pagination.pages_count,
         pagination.number_of_items_per_page,
-        pagination.items
+        pagination.items_count
       ),
       (1, 159, 3, 475)
     );
