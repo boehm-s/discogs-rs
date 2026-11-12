@@ -7,7 +7,7 @@ use crate::error::Result;
 /// `GET /oauth/identity`
 #[instrument(skip(client))]
 pub(crate) async fn fetch_identity(client: &Client) -> Result<Identity> {
-  client.get("/oauth/identity", &[]).await
+  client.get("/oauth/identity", &()).await
 }
 
 #[cfg(test)]

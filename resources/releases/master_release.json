@@ -1,0 +1,342 @@
+{
+  "id": 406634,
+  "main_release": 2287669,
+  "most_recent_release": 37905636,
+  "resource_url": "https://api.discogs.com/masters/406634",
+  "uri": "https://www.discogs.com/master/406634-King-Crimson-In-The-Court-Of-The-Crimson-King-An-Observation-By-King-Crimson",
+  "versions_url": "https://api.discogs.com/masters/406634/versions",
+  "main_release_url": "https://api.discogs.com/releases/2287669",
+  "most_recent_release_url": "https://api.discogs.com/releases/37905636",
+  "num_for_sale": 3195,
+  "lowest_price": 1.5,
+  "images": [
+    {
+      "type": "primary",
+      "uri": "https://i.discogs.com/7GMjjIUsUzwKNSGtaGGt1vw0fDGBCAjdt_g1Ly3YkX4/rs:fit/g:sm/q:90/h:600/w:568/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDg4/MC00MDU3LmpwZWc.jpeg",
+      "resource_url": "https://i.discogs.com/7GMjjIUsUzwKNSGtaGGt1vw0fDGBCAjdt_g1Ly3YkX4/rs:fit/g:sm/q:90/h:600/w:568/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDg4/MC00MDU3LmpwZWc.jpeg",
+      "uri150": "https://i.discogs.com/kHBUxoIdI-naKXWCubfnP4hiZoobtC5RLqqHjk3GF84/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDg4/MC00MDU3LmpwZWc.jpeg",
+      "width": 568,
+      "height": 600
+    },
+    {
+      "type": "secondary",
+      "uri": "https://i.discogs.com/pJsu9kBr-2ZuwpTlAaWl4ZEbyzvBbizSdbIVOKsLAnw/rs:fit/g:sm/q:90/h:586/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYxOTUxODQw/NC05NjQzLmpwZWc.jpeg",
+      "resource_url": "https://i.discogs.com/pJsu9kBr-2ZuwpTlAaWl4ZEbyzvBbizSdbIVOKsLAnw/rs:fit/g:sm/q:90/h:586/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYxOTUxODQw/NC05NjQzLmpwZWc.jpeg",
+      "uri150": "https://i.discogs.com/-ftw5W5ORgOLghpIrx_vgsotariJfyXCVHE9bJwLJsg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYxOTUxODQw/NC05NjQzLmpwZWc.jpeg",
+      "width": 600,
+      "height": 586
+    },
+    {
+      "type": "secondary",
+      "uri": "https://i.discogs.com/rhxyKmOfiZjnSt27PpswiOg_pbbNXxhf2-H6oXWb7Gk/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYxOTUxODQw/NC00MjcxLmpwZWc.jpeg",
+      "resource_url": "https://i.discogs.com/rhxyKmOfiZjnSt27PpswiOg_pbbNXxhf2-H6oXWb7Gk/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYxOTUxODQw/NC00MjcxLmpwZWc.jpeg",
+      "uri150": "https://i.discogs.com/NZ-UZ9wLpIE-l6MLuPxFZebgE6TT5s2_rX6_UGetMbA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYxOTUxODQw/NC00MjcxLmpwZWc.jpeg",
+      "width": 600,
+      "height": 587
+    },
+    {
+      "type": "secondary",
+      "uri": "https://i.discogs.com/UudgJOoYE-smRKnvdDHj-mD4FS_VylL3bsyHi6aXn6Q/rs:fit/g:sm/q:90/h:600/w:572/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDg4/MC01NjA5LmpwZWc.jpeg",
+      "resource_url": "https://i.discogs.com/UudgJOoYE-smRKnvdDHj-mD4FS_VylL3bsyHi6aXn6Q/rs:fit/g:sm/q:90/h:600/w:572/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDg4/MC01NjA5LmpwZWc.jpeg",
+      "uri150": "https://i.discogs.com/XCdd4xKkNOAViEvZYzkvLsUlsLvL6KeNaiNO62Q6E_U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDg4/MC01NjA5LmpwZWc.jpeg",
+      "width": 572,
+      "height": 600
+    },
+    {
+      "type": "secondary",
+      "uri": "https://i.discogs.com/E0sNFznaiYWREDbvetsePfJwybKx5r9S5IJCEevXV4M/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDkw/Ni00NTE5LmpwZWc.jpeg",
+      "resource_url": "https://i.discogs.com/E0sNFznaiYWREDbvetsePfJwybKx5r9S5IJCEevXV4M/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDkw/Ni00NTE5LmpwZWc.jpeg",
+      "uri150": "https://i.discogs.com/pgjJKSEIGHx8W3a8KZ_3y5zaAg6HPueGK8E03CFFyT8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDkw/Ni00NTE5LmpwZWc.jpeg",
+      "width": 600,
+      "height": 600
+    },
+    {
+      "type": "secondary",
+      "uri": "https://i.discogs.com/-DXFNpsJLR5VpDa9COsBdbdez3vb2TVsTnuR0F5-_0A/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDkw/Ni02NDU0LmpwZWc.jpeg",
+      "resource_url": "https://i.discogs.com/-DXFNpsJLR5VpDa9COsBdbdez3vb2TVsTnuR0F5-_0A/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDkw/Ni02NDU0LmpwZWc.jpeg",
+      "uri150": "https://i.discogs.com/oRzIMhFxsYMmVlJqlhwU3bK_zKv_XBfIAdELSZLQzuM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODc2/NjktMTYwMDU5MDkw/Ni02NDU0LmpwZWc.jpeg",
+      "width": 600,
+      "height": 600
+    }
+  ],
+  "genres": [
+    "Rock"
+  ],
+  "styles": [
+    "Prog Rock",
+    "Symphonic Rock"
+  ],
+  "year": 1969,
+  "tracklist": [
+    {
+      "position": "A1",
+      "type_": "track",
+      "title": "21st Century Schizoid Man Including Mirrors",
+      "extraartists": [
+        {
+          "name": "Greg Lake",
+          "anv": "Lake",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259120,
+          "resource_url": "https://api.discogs.com/artists/259120"
+        },
+        {
+          "name": "Ian McDonald",
+          "anv": "McDonald",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259119,
+          "resource_url": "https://api.discogs.com/artists/259119"
+        },
+        {
+          "name": "Michael Giles",
+          "anv": "Giles",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259121,
+          "resource_url": "https://api.discogs.com/artists/259121"
+        },
+        {
+          "name": "Peter Sinfield",
+          "anv": "Sinfield",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 253144,
+          "resource_url": "https://api.discogs.com/artists/253144"
+        },
+        {
+          "name": "Robert Fripp",
+          "anv": "Fripp",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 10355,
+          "resource_url": "https://api.discogs.com/artists/10355"
+        }
+      ],
+      "duration": "6:52"
+    },
+    {
+      "position": "A2",
+      "type_": "track",
+      "title": "I Talk To The Wind",
+      "extraartists": [
+        {
+          "name": "Ian McDonald",
+          "anv": "McDonald",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259119,
+          "resource_url": "https://api.discogs.com/artists/259119"
+        },
+        {
+          "name": "Peter Sinfield",
+          "anv": "Sinfield",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 253144,
+          "resource_url": "https://api.discogs.com/artists/253144"
+        }
+      ],
+      "duration": "5:40"
+    },
+    {
+      "position": "A3",
+      "type_": "track",
+      "title": "Epitaph Including March For No Reason And Tomorrow And Tomorrow",
+      "extraartists": [
+        {
+          "name": "Greg Lake",
+          "anv": "Lake",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259120,
+          "resource_url": "https://api.discogs.com/artists/259120"
+        },
+        {
+          "name": "Ian McDonald",
+          "anv": "McDonald",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259119,
+          "resource_url": "https://api.discogs.com/artists/259119"
+        },
+        {
+          "name": "Michael Giles",
+          "anv": "Giles",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259121,
+          "resource_url": "https://api.discogs.com/artists/259121"
+        },
+        {
+          "name": "Peter Sinfield",
+          "anv": "Sinfield",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 253144,
+          "resource_url": "https://api.discogs.com/artists/253144"
+        },
+        {
+          "name": "Robert Fripp",
+          "anv": "Fripp",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 10355,
+          "resource_url": "https://api.discogs.com/artists/10355"
+        }
+      ],
+      "duration": "8:30"
+    },
+    {
+      "position": "B1",
+      "type_": "track",
+      "title": "Moonchild Including The Dream And The Illusion",
+      "extraartists": [
+        {
+          "name": "Greg Lake",
+          "anv": "Lake",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259120,
+          "resource_url": "https://api.discogs.com/artists/259120"
+        },
+        {
+          "name": "Ian McDonald",
+          "anv": "McDonald",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259119,
+          "resource_url": "https://api.discogs.com/artists/259119"
+        },
+        {
+          "name": "Michael Giles",
+          "anv": "Giles",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259121,
+          "resource_url": "https://api.discogs.com/artists/259121"
+        },
+        {
+          "name": "Peter Sinfield",
+          "anv": "Sinfield",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 253144,
+          "resource_url": "https://api.discogs.com/artists/253144"
+        },
+        {
+          "name": "Robert Fripp",
+          "anv": "Fripp",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 10355,
+          "resource_url": "https://api.discogs.com/artists/10355"
+        }
+      ],
+      "duration": "12:09"
+    },
+    {
+      "position": "B2",
+      "type_": "track",
+      "title": "The Court Of The Crimson King Including The Return Of The Fire Witch And The Dance Of The Puppets",
+      "extraartists": [
+        {
+          "name": "Ian McDonald",
+          "anv": "McDonald",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 259119,
+          "resource_url": "https://api.discogs.com/artists/259119"
+        },
+        {
+          "name": "Peter Sinfield",
+          "anv": "Sinfield",
+          "join": "",
+          "role": "Written-By",
+          "tracks": "",
+          "id": 253144,
+          "resource_url": "https://api.discogs.com/artists/253144"
+        }
+      ],
+      "duration": "8:48"
+    }
+  ],
+  "artists": [
+    {
+      "name": "King Crimson",
+      "anv": "",
+      "join": "",
+      "role": "",
+      "tracks": "",
+      "id": 70828,
+      "resource_url": "https://api.discogs.com/artists/70828",
+      "thumbnail_url": "https://i.discogs.com/tD9kMI9GK7WGiFo2bKOQ6WNZIqzVmBBqNsE8Jc57byA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwODI4/LTEyMzY2MTc0ODgu/anBlZw.jpeg"
+    }
+  ],
+  "title": "In The Court Of The Crimson King (An Observation By King Crimson)",
+  "notes": "Official release date as per Melody Maker: October 10, 1969.",
+  "data_quality": "Correct",
+  "videos": [
+    {
+      "uri": "https://www.youtube.com/watch?v=7OvW8Z7kiws",
+      "title": "King Crimson - 21st Century Schizoid Man (Including \"Mirrors\")",
+      "description": "21ST CENTURY SCHIZOID MAN including MIRRORS  \n(Fripp, Lake, McDonald, Giles, Sinfield)\n\nCat's foot iron claw \nNeuro-surgeons scream for more \nAt paranoia's poison door \nTwenty first century schizoid man. \n\nBlood rack barbed wire \nPoliticians' funeral pyre",
+      "duration": 443,
+      "embed": true
+    },
+    {
+      "uri": "https://www.youtube.com/watch?v=UlKrH07au6E",
+      "title": "King Crimson - I Talk To The Wind",
+      "description": "I TALK TO THE WIND \n(McDonald, Sinfield)\n\nSaid the straight man to the late man \nWhere have you been\nI've been here and I've been there \nAnd I've been in between.\n\nI talk to the wind\nMy words are all carried away \nI talk to the wind\nThe wind does not hear",
+      "duration": 366,
+      "embed": true
+    },
+    {
+      "uri": "https://www.youtube.com/watch?v=vXrpFxHfppI",
+      "title": "King Crimson - Epitaph (Including \"March For No Reason\" and \"Tomorrow And Tomorrow\")",
+      "description": "EPITAPH \nincluding MARCH FOR NO REASON and TOMORROW AND TOMORROW  \n(Fripp, Lake, McDonald, Giles, Sinfield)\n\n\nThe wall on which the prophets wrote \nIs cracking at the seams. \nUpon the instruments of death \nThe sunlight brightly gleams. \nWhen every man is ",
+      "duration": 527,
+      "embed": true
+    },
+    {
+      "uri": "https://www.youtube.com/watch?v=DnYDqv8-lJE",
+      "title": "King Crimson - Moonchild (Including \"The Dream\" And \"The Illusion\")",
+      "description": "MOONCHILD \nincluding THE DREAM and THE ILLUSION  \n(Fripp, Lake, McDonald, Giles, Sinfield)\n\nCall her moonchild\nDancing in the shallows of a river\nLovely moonchild\nDreaming in the shadow\nof the willow.\n\nTalking to the trees of the\ncobweb strange\nSleeping o",
+      "duration": 0,
+      "embed": true
+    },
+    {
+      "uri": "https://www.youtube.com/watch?v=ukgraQ-xkp4",
+      "title": "King Crimson - The Court Of The Crimson King",
+      "description": "THE COURT OF THE CRIMSON KING \nincluding THE RETURN OF THE FIRE WITCH and THE DANCE OF THE PUPPETS  \n(McDonald, Sinfield)\n\nThe rusted chains of prison moons \nAre shattered by the sun. \nI walk a road, horizons change \nThe tournament's begun. \nThe purple pi",
+      "duration": 0,
+      "embed": true
+    },
+    {
+      "uri": "https://www.youtube.com/watch?v=0ju5LRTMFLw",
+      "title": "King Crimson - In The Court Of The Crimson King (Album Visualiser)",
+      "description": "00:00:00 21st Century Schizoid Man (Including 'Mirrors')\n00:07:23 I Talk To The Wind\n00:13:29 Epitaph (Including 'March For No Reason' and 'Tomorrow And Tomorrow')\n00:22:15 Moonchild (Including 'The Dream' and 'The Illusion')\n00:34:27 The Court Of The Cri",
+      "duration": 4038,
+      "embed": true
+    }
+  ]
+}

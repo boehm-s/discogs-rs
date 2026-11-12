@@ -1,5 +1,7 @@
 //! Authentication endpoints added to [`Client`], and the OAuth flow.
 
+use tracing::instrument;
+
 use crate::auth::model::credentials::{AccessToken, ConsumerCredentials, RequestToken};
 use crate::auth::model::identity::Identity;
 use crate::auth::service::identity::fetch_identity;
@@ -15,6 +17,7 @@ impl Client {
   /// # Errors
   ///
   /// [`DiscogsClientError::Api`](crate::error::DiscogsClientError::Api) with status 401 if the client is not authenticated as a user.
+  #[instrument(skip_all)]
   pub async fn identity(&self) -> Result<Identity> {
     fetch_identity(self).await
   }
@@ -56,6 +59,7 @@ impl OAuthFlow {
   ///
   /// [`DiscogsClientError::Api`](crate::error::DiscogsClientError::Api) if Discogs rejects the consumer credentials,
   /// [`DiscogsClientError::OAuth`](crate::error::DiscogsClientError::OAuth) if the response does not contain a token.
+  #[instrument(skip_all)]
   pub async fn request_token(&self, callback: Option<&str>) -> Result<RequestToken> {
     fetch_request_token(&self.client, &self.consumer, callback).await
   }
@@ -66,6 +70,7 @@ impl OAuthFlow {
   ///
   /// [`DiscogsClientError::Api`](crate::error::DiscogsClientError::Api) if the verifier or the request token is rejected,
   /// [`DiscogsClientError::OAuth`](crate::error::DiscogsClientError::OAuth) if the response does not contain a token.
+  #[instrument(skip_all)]
   pub async fn access_token(&self, request_token: &RequestToken, verifier: &str) -> Result<AccessToken> {
     fetch_access_token(&self.client, &self.consumer, request_token, verifier).await
   }
