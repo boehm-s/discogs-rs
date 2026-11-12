@@ -17,6 +17,9 @@ pub enum DiscogsClientError {
     message: Option<String>,
   },
 
+  #[error("invalid query: {0}")]
+  InvalidQuery(String),
+
   #[error("invalid OAuth response: {0}")]
   OAuth(String),
 

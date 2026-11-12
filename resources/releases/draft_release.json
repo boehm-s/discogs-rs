@@ -1,0 +1,93 @@
+{
+  "id": 5000000,
+  "status": "Draft",
+  "year": 0,
+  "resource_url": "https://api.discogs.com/releases/5000000",
+  "uri": "https://www.discogs.com/release/5000000-_-",
+  "artists": [
+    {
+      "name": "",
+      "anv": "",
+      "join": "",
+      "role": "",
+      "tracks": "",
+      "id": null,
+      "resource_url": null
+    }
+  ],
+  "artists_sort": "",
+  "labels": [
+    {
+      "name": "",
+      "catno": "",
+      "entity_type": "1",
+      "entity_type_name": "Label",
+      "id": null,
+      "resource_url": null
+    }
+  ],
+  "series": [],
+  "companies": [],
+  "formats": [
+    {
+      "name": "Vinyl",
+      "qty": "1",
+      "descriptions": []
+    }
+  ],
+  "data_quality": "Correct",
+  "community": {
+    "have": 0,
+    "want": 3,
+    "rating": {
+      "count": 0,
+      "average": 0.0
+    },
+    "submitter": null,
+    "contributors": [],
+    "data_quality": "Correct",
+    "status": "Draft"
+  },
+  "format_quantity": 1,
+  "date_added": "2000-01-01T00:00:00-08:00",
+  "date_changed": "2000-01-01T00:00:00-08:00",
+  "num_for_sale": 0,
+  "lowest_price": null,
+  "title": "",
+  "country": null,
+  "identifiers": [],
+  "videos": [],
+  "genres": [],
+  "styles": [],
+  "tracklist": [
+    {
+      "position": "",
+      "type_": "track",
+      "title": "",
+      "duration": ""
+    },
+    {
+      "position": "",
+      "type_": "track",
+      "title": "",
+      "duration": ""
+    },
+    {
+      "position": "",
+      "type_": "track",
+      "title": "",
+      "duration": ""
+    },
+    {
+      "position": "",
+      "type_": "track",
+      "title": "",
+      "duration": ""
+    }
+  ],
+  "images": [],
+  "thumb": "",
+  "estimated_weight": 230,
+  "blocked_from_sale": false,
+  "is_offensive": false
+}

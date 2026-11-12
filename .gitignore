@@ -15,5 +15,10 @@ Cargo.lock
 .idea/
 .vscode/
 
+# Emacs
+\#*#
+.#*
+*~
+
 # Personal notes, never committed
 *.local.md

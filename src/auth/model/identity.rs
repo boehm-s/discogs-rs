@@ -2,6 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
+use crate::helpers::ids::UserId;
+
 /// The user the client acts on behalf of, returned by
 /// [`Client::identity`](crate::client::Client::identity).
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
@@ -9,7 +11,7 @@ use serde::{Deserialize, Serialize};
 // destructure this struct, so adding a field is not a breaking change.
 #[non_exhaustive]
 pub struct Identity {
-  pub id: u64,
+  pub id: UserId,
   pub username: String,
   pub resource_url: String,
   pub consumer_name: String,
@@ -18,6 +20,7 @@ pub struct Identity {
 #[cfg(test)]
 mod tests {
   use super::Identity;
+  use crate::helpers::ids::UserId;
 
   #[test]
   fn deserialize_identity_response() {
@@ -25,7 +28,7 @@ mod tests {
     assert_eq!(
       identity,
       Identity {
-        id: 1_234_567,
+        id: UserId::new(1_234_567),
         username: "example_user".to_owned(),
         resource_url: "https://api.discogs.com/users/example_user".to_owned(),
         consumer_name: "Example App".to_owned(),

@@ -6,6 +6,7 @@ use std::sync::Arc;
 use oauth1_request::ParameterList;
 use reqwest::header::{AUTHORIZATION, HeaderValue, USER_AGENT};
 use reqwest::{Method, RequestBuilder, Response};
+use serde::Serialize;
 use serde::de::DeserializeOwned;
 use tracing::{Span, instrument};
 
@@ -41,9 +42,16 @@ impl Client {
     }
   }
 
-  pub(crate) async fn get<T: DeserializeOwned>(&self, path: &str, query: &[(&str, &str)]) -> Result<T> {
+  pub(crate) async fn get<T: DeserializeOwned>(&self, path: &str, query: &impl Serialize) -> Result<T> {
+    let query =
+      serde_urlencoded::to_string(query).map_err(|error| DiscogsClientError::InvalidQuery(error.to_string()))?;
+    let query: Vec<(String, String)> = url::form_urlencoded::parse(query.as_bytes()).into_owned().collect();
+    let query: Vec<(&str, &str)> = query
+      .iter()
+      .map(|(name, value)| (name.as_str(), value.as_str()))
+      .collect();
     let auth = &self.inner.auth;
-    let request = self.request(Method::GET, path, query, |method, url, params| {
+    let request = self.request(Method::GET, path, &query, |method, url, params| {
       auth.authorization_header(method, url, params)
     });
     Ok(Self::send(request).await?.json().await?)
@@ -177,6 +185,8 @@ impl ClientBuilder {
 
 #[cfg(test)]
 mod tests {
+  use std::collections::BTreeMap;
+
   use reqwest::StatusCode;
   use wiremock::matchers::{header, header_regex, method, path, query_param};
   use wiremock::{Mock, MockServer, ResponseTemplate};
@@ -205,7 +215,10 @@ mod tests {
 
     let client = Client::builder(UA).base_url(server.uri()).build().unwrap();
     client
-      .get::<serde_json::Value>("/database/search", &[("q", "Nirvana & Co"), ("type", "release")])
+      .get::<serde_json::Value>(
+        "/database/search",
+        &BTreeMap::from([("q", "Nirvana & Co"), ("type", "release")]),
+      )
       .await
       .unwrap();
   }
@@ -225,7 +238,7 @@ mod tests {
       .base_url(server.uri())
       .build()
       .unwrap();
-    client.get::<serde_json::Value>("/anything", &[]).await.unwrap();
+    client.get::<serde_json::Value>("/anything", &()).await.unwrap();
   }
 
   #[tokio::test]
@@ -246,7 +259,7 @@ mod tests {
       .base_url(server.uri())
       .build()
       .unwrap();
-    client.get::<serde_json::Value>("/anything", &[]).await.unwrap();
+    client.get::<serde_json::Value>("/anything", &()).await.unwrap();
   }
 
   #[tokio::test]
@@ -269,7 +282,7 @@ mod tests {
       .base_url(server.uri())
       .build()
       .unwrap();
-    client.get::<serde_json::Value>("/anything", &[]).await.unwrap();
+    client.get::<serde_json::Value>("/anything", &()).await.unwrap();
   }
 
   #[tokio::test]
@@ -278,7 +291,7 @@ mod tests {
     Mock::given(method("GET")).respond_with(json("{}")).mount(&server).await;
 
     let client = Client::builder(UA).base_url(server.uri()).build().unwrap();
-    client.get::<serde_json::Value>("/anything", &[]).await.unwrap();
+    client.get::<serde_json::Value>("/anything", &()).await.unwrap();
 
     let requests = server.received_requests().await.unwrap();
     assert!(
@@ -300,7 +313,7 @@ mod tests {
       .await;
 
     let client = Client::builder(UA).base_url(server.uri()).build().unwrap();
-    match client.get::<serde_json::Value>("/oauth/identity", &[]).await {
+    match client.get::<serde_json::Value>("/oauth/identity", &()).await {
       Err(DiscogsClientError::Api { status, message }) => {
         assert_eq!(status, StatusCode::UNAUTHORIZED);
         assert_eq!(
@@ -321,7 +334,7 @@ mod tests {
       .await;
     let client = Client::builder(UA).base_url(server.uri()).build().unwrap();
 
-    match client.get::<serde_json::Value>("/oauth/identity", &[]).await {
+    match client.get::<serde_json::Value>("/oauth/identity", &()).await {
       Err(DiscogsClientError::Api { status, message }) => {
         assert_eq!(status, StatusCode::BAD_GATEWAY);
         assert_eq!(message, None);
