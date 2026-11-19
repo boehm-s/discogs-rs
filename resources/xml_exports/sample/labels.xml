@@ -1,0 +1,553 @@
+<labels>
+<label><id>1</id><name>Planet E</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>[a=Carl Craig]'s classic techno label founded in 1991.&#13;
+&#13;
+On at least 1 release, Planet E is listed as publisher.</profile><data_quality>Needs Vote</data_quality><urls><url>http://planet-e.net</url><url>http://planetecommunications.bandcamp.com</url><url>http://www.facebook.com/planetedetroit</url><url>http://www.flickr.com/photos/planetedetroit</url><url>http://www.instagram.com/carlcraignet</url><url>http://myspace.com/planetecom</url><url>http://myspace.com/planetedetroit</url><url>http://soundcloud.com/planetedetroit</url><url>http://twitter.com/planetedetroit</url><url>http://vimeo.com/user1265384</url><url>http://en.wikipedia.org/wiki/Planet_E_Communications</url><url>http://www.youtube.com/user/planetedetroit</url></urls><sublabels><label id="31405">I Ner Zon Sounds</label><label id="41841">Community Projects</label><label id="86537">Antidote (4)</label><label id="153760">Guilty Pleasures</label><label id="277579">Planet E Communications</label><label id="294738">Planet E Communications, Inc.</label><label id="488315">TWPENTY</label><label id="1560615">Planet E Productions</label></sublabels></label>
+<label><id>2</id><name>Earthtones Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>California deep house label founded by [a=Jamie Thinnes]. Now defunct and continued as [l=Seasons Recordings].</profile><data_quality>Correct</data_quality><urls><url>http://www.seasonsrecordings.com/</url></urls></label>
+<label><id>3</id><name>Seasons Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>California deep-house label founded by [a=Jamie Thinnes]. &#13;
+The first ten records were released on [l=Earthtones Recordings].&#13;
+</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.seasonsrecordings.com</url><url>http://www.facebook.com/SEASONS-RECORDINGS-160164731945/</url><url>http://soundcloud.com/seasonsrecords</url><url>http://twitter.com/SeasonsRecords</url><url>https://seasonsrecordings.bandcamp.com/music</url><url>https://www.youtube.com/channel/UClv7-8Gfk2Uc47ly6fTWmvQ</url></urls><sublabels><label id="66542">Seasons Limited</label><label id="297127">Seasons Classics</label></sublabels></label>
+<label><id>4</id><name>Siesta Music</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><data_quality>Needs Vote</data_quality><urls><url>www.siestarecords.com</url><url>http://www.facebook.com/pages/Siesta-Records-Gear/154910143836?sk=app_167097993346860</url><url>http://soundcloud.com/siestarecords</url><url>https://twitter.com/siestarecords</url><url>http://www.myspace.com/siestarecords</url></urls><sublabels><label id="3545">Bluem Recordings</label><label id="4786">Moezee Muzik</label><label id="20284">Bella Recordings</label><label id="615201">Siesta Records (2)</label></sublabels></label>
+<label><id>5</id><name>Svek</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Swedish record label that mainly released house music, started by [a674] in 1996 and was run together with [a239].&#13;
+&#13;
+Among the artists who have released music on Svek are, in addition to Stephan Grieder &amp; Jesper Dahlbäck themselves, Bjørn Torske and Cari Lekebusch (under the pseudonym Mr. James Barth) worth mentioning.</profile><data_quality>Needs Vote</data_quality><parentLabel id="4711">Goldhead Music</parentLabel><urls><url>https://sv.wikipedia.org/wiki/Svek_(skivbolag)</url></urls><sublabels><label id="2437">Birdy</label></sublabels></label>
+<label><id>6</id><name>Ruffhouse Records</name><profile>Founded in 1989 by Chris Schwartz and Philadelphia hip-hop engineer and producer Joe "The Butcher" Nicolo as a joint venture with Columbia Records. Early releases were marketed by [l=Enigma Records (3)]. Artists included Cypress Hill, Kriss Kross, The Fugees and Lauryn Hill.&#13;
+&#13;
+In 1999, Schwartz and Nicolo stopped the label. Schwartz and Kevon Glickman continued with RuffNation Records; Nicolo continued with Judgement Records. The label was relaunched in July 2012.&#13;
+&#13;
+</profile><data_quality>Correct</data_quality><parentLabel id="1866">Columbia</parentLabel><urls><url>https://en.wikipedia.org/wiki/Ruffhouse_Records</url></urls><sublabels><label id="13738">Rufflife UK Ltd.</label><label id="3200972">Ruff Music (2)</label></sublabels></label>
+<label><id>7</id><name>F-111 Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><data_quality>Correct</data_quality><parentLabel id="1000">Warner Bros. Records</parentLabel><urls/><sublabels><label id="3864">Higher Education</label></sublabels></label>
+<label><id>8</id><name>Rather Interesting</name><profile>R.I. was founded in 1994 by [a=Uwe Schmidt].&#13;
+&#13;
+In a 2002 [url=http://www.barcodezine.com/Peter%20Namlook%20Interview.html]interview[/url] with FAX founder [a=Pete Namlook] he stated "Rather Interesting is and always was a sub-label of FAX".&#13;
+&#13;
+[a=Uwe Schmidt] announced in 2012 that Rather Interesting would no longer continue due to the untimely passing of [a=Pete Namlook].&#13;
+&#13;
+Labelcode [b]LC 6269[/b]&#13;
+</profile><data_quality>Correct</data_quality><parentLabel id="60">Fax +49-69/450464</parentLabel><urls><url>http://music.hyperreal.org/labels/rather_interesting/</url><url>http://www.atom-tm.com</url></urls><sublabels><label id="307275">Rather Interesting Classics</label></sublabels></label>
+<label><id>9</id><name>Deep4Life</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Electronic music with emphasis on deep house label from Chicago, USA. Started in October 1998 by [a=Chris Gray] with the first release arriving in Spring 1999.</profile><data_quality>Correct</data_quality><urls><url>http://www.deep4life.com</url><url>https://www.facebook.com/deep4liferecordings/</url></urls></label>
+<label><id>10</id><name>Naked Music Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House/downtempo label based in San Francisco, California.&#13;
+Co-founded by [a=Jay Denes] and [a=David Boonshoft], the label was an extension of their production company [l=Naked Music NYC].&#13;
+[a=Bruno Ybarra] was the label manager from late 1998 to July 2003 and responsible for all A&amp;R, legal, manufacturing, distribution, marketing and promotion.&#13;
+The distinctive artwork on the label's early releases was by [a=Stuart Patterson (8)] at [l=Art Dept. NYC].</profile><data_quality>Needs Vote</data_quality><parentLabel id="272720">Naked Music NYC Recordings, LLC</parentLabel><urls><url>http://www.naked-music.com</url><url>http://www.facebook.com/Naked-Music-240513752731765</url><url>http://www.youtube.com/channel/UCUODSYtgdAtbb_h-bCD5vaw</url><url>http://nakedmusicrecordings.bandcamp.com</url></urls></label>
+<label><id>12</id><name>Large Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>1990s-2000s house label from Chicago, Illinois.&#13;
+&#13;
+Founded in 1993 by [a=Jeff Craven] with [a=Gregg Dickson] who also initially founded [l=8th Bar] and [l=Swing Street]. The first incarnation of the Large logo, with the upturned A, was designed by [a=Lil' John Coleman], then buyer at Loop Records in Chicago and the producer responsible for the label's initial release. The label is owned by Jeff Craven and based in Chicago.&#13;
+Label rebranded as [l=Large Music] in the 2000s.</profile><data_quality>Needs Vote</data_quality><parentLabel id="380335">Large Music, LLC</parentLabel><urls><url>http://www.largemusic.com</url><url>http://largemusic.bandcamp.com</url><url>http://www.facebook.com/largemusic</url><url>http://www.instagram.com/largemusic</url><url>http://linktr.ee/LargeMusic</url><url>http://largemusic.podomatic.com</url><url>http://www.soundcloud.com/large-music</url><url>http://twitter.com/largemusic</url><url>http://www.youtube.com/user/LargeMusicChicago</url></urls><sublabels><label id="1828">Vista Recordings</label><label id="143550">Swing Street</label><label id="204721">Large Tek</label><label id="597655">8th Bar</label></sublabels></label>
+<label><id>13</id><name>Glasgow Underground</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Glasgow Underground was set up in 1997 by [a=Kevin McKay]. He began the label releasing his own music and collaborations with friends and other Glasgow-based artists ([url=https://www.discogs.com/artist/2046-16B?filter_anv=1&amp;anv=Omid+16B]Omid 16B[/url], [a441], [a447], [a4054]). Through his DJing and work for various music magazines (Muzik, Jockey Slut, Mixmag Update) he met some of his favourite producers of the time ([a2583], [a77], [a170413], et al) and convinced some of them to join him releasing on GU. &#13;
+&#13;
+In the early 2000s, Kevin met [a=Mylo] and set up the [l=Breastfed Recordings] label. The global success of the "[m53063]" release, meant Glasgow Underground was put on hold. After leaving the Breastfed label in 2011, Kevin re-started Glasgow Underground and since then the label has gone on to re-invigorate Romanthony's catalogue with remixes from the likes of [a4492], [a970905], [a3221], [a1095], [a408185], [a2432212], [a506574], [a2605338], [a3513068], [a50620], [a52501], and [a2293268]. &#13;
+&#13;
+The label has also introduced producers like [a2836171], [a1137042], [a1921483], and [a4482463] as well has releasing established and rising stars such as [a1547806], [a1254764], and [a1100914]. </profile><data_quality>Correct</data_quality><urls><url>http://www.glasgowunderground.com</url><url>http://www.facebook.com/glasgowunderground</url><url>http://www.instagram.com/glasgowunderground</url><url>http://soundcloud.com/glasgowunderground</url><url>http://twitter.com/kevinmckay</url><url>http://www.youtube.com/glasgowunderground</url></urls><sublabels><label id="4200">Muzique Tropique</label><label id="282060">Glasgow Underground Recordings</label><label id="318209">Glasgow Underground Music</label></sublabels></label>
+<label><id>14</id><name>F Communications</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>French Electronic Dance label, founded in 1994 by [a=Eric Morand] and [a=Laurent Garnier] as a successor of [l=Fnac Music Dance Division], 'After E comes F'. Also called fcom.&#13;
+In 1999, it was named "one of France's premier labels specializing in electronic music". In 2003, the record label had a turnover of 2.4 million euros. Label stopped in 2008. &#13;
+&#13;
+FCom is the result of the meeting at the end of the 80s of two pioneers of the French electronic scene; Laurent GARNIER and Eric MORAND.&#13;
+Their first collaboration dates from 1991, when Eric MORAND suggested that Laurent GARNIER release his first pieces on FNAC MUSIC-DANCE DIVISION, of which he was artistic director. Three years later, after having initiated the first French techno/house label with international influence, we decided to write a new chapter in electronic culture by creating F Communications in April 1994. It features the artists who made the reputation of FNAC MUSIC; Laurent GARNIER, Ludovic NAVARRE, SHAZZ, SCAN&#13;
+&#13;
+New talents are opening the label to other sounds of other styles. The creativity of the artists pushes the limits of the label. The slogan “electronic with no limit” is essential. Explore, search, Innovate. Experiment without an immediate obligation to achieve results. Priority to emotion, spontaneity.&#13;
+&#13;
+This experiment is musical but above all a global vision of the label. By launching Laurent GARNIER's first albums "Shot in the Dark" and ST GERMAIN "Boulevard" in 1994, FCOM confirmed that electro can be listened to at home. The success of these two albums established FCOM as a label that discovers and develops talent.&#13;
+The label's influence is immediately global with more than 70% of sales or concert/DJ dates outside France establishing FCOM as the leading French electronic label. Situation confirmed by the success of MR OIZO “Flat beat” in 1999, the album “Newcomer” in 2002 or ALEXKID with “Come with me”.&#13;
+&#13;
+But more than sales, FCOM's success is its longevity, its image as a quality nursery. Unclassifiable. Unpredictable.&#13;
+&#13;
+The FCOM evenings, the artists' concerts, the DJs' sets have contributed greatly to the reputation of the label. Whether in clubs, or in festivals (Montreux Jazz, Vielles Charrues, etc.) these are always great moments of meeting between artists and FCOM fans.&#13;
+&#13;
+We cannot explain FCOM without talking about the visual identity of the label which revealed the graphic design talents of Geneviève Gauckler (1994/1998), Seb Jarnot (1998/2002) or HotSpot Design . Same thing for videos for which we have always favored carte blanche to young directors or artist/director meetings.&#13;
+&#13;
+FCOM is performances or collaborations at the Palais de Tokyo or Beaubourg. It is also a Lieu Commun launched in May 2005 in Paris with Matali Crasset and Ron Orb. Three universes; Music, design and fashion coming together, three creators, the same vision. A store, a place of welcome, exchanges, sharing where you will discover the entire FCOM catalog and surprises.&#13;
+&#13;
+FCOM is finally a hotel, the HI Hotel in Nice for which we are doing all the sound design. From the nine room concepts, to the spa, including the swimming pool or the HI bar, all the spaces of this hotel designed by Matali Crasset are bathed in a musical selection made by FCOM. An innovative approach to the relationship with music for an experimental and innovative hotel.&#13;
+&#13;
+So actually, “what is FCOM”? A label ? A creative bubble? A human adventure?&#13;
+&#13;
+[Taken from website]&#13;
+&#13;
+[b]Label Code: LC 01347[/b]&#13;
+</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.fcom.fr</url><url>http://web.archive.org/web/*/http://www.fcom.fr</url><url>http://www.dailymotion.com/fcom</url><url>http://www.instagram.com/fcom25</url><url>http://www.myspace.com/fcom</url><url>http://soundcloud.com/fcommunications</url><url>http://www.youtube.com/user/fcommunications</url><url>http://web.archive.org/web/*/http://www.fcom.fr</url></urls><sublabels><label id="33023">F... U! FCOM</label><label id="1815920">F Communications 25 Years</label></sublabels></label>
+<label><id>15</id><name>20:20 Vision</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>20/20 Vision &#13;
+&#13;
+An imperfect vision of music without boundaries&#13;
+&#13;
+founder - Ralph Lawson&#13;
+location - Leeds, UK&#13;
+&#13;
+On some releases the label appears as 2020Vision or 20:20 Vision or 2020 Vision Recordings </profile><data_quality>Needs Vote</data_quality><parentLabel id="396938">2020Vision Recordings Ltd.</parentLabel><urls><url>http://www.2020recordings.com</url><url>http://2020vision.bandcamp.com</url><url>http://www.facebook.com/2020VisionRecordings</url><url>http://www.instagram.com/2020vision_recordings</url><url>http://www.myspace.com/2020soundsystem</url><url>http://soundcloud.com/2020visionrecordings</url><url>http://twitter.com/2020Visionlabel</url><url>http://www.youtube.com/user/2020recordings</url></urls><sublabels><label id="877">20:20 D Vision</label><label id="29641">Nono Records (2)</label><label id="30709">Doublevision (2)</label><label id="34355">.dotbleep</label><label id="42848">20:20 Vintage Visions</label><label id="44463">Infant Records</label><label id="416207">2020 Midnight Visions</label><label id="925394">Midnight Visions</label><label id="1500231">20:20 Vision Recordings</label><label id="1554782">20:20 Vision Limited Series</label><label id="2466205">Fragments Of Reality</label></sublabels></label>
+<label><id>16</id><name>Sepia</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>UK&#13;
+Run by Johnny Dankworth and Cleo Laine as the label for their company Repertoire Records Ltd.&#13;
+** For reissues of remastered musicals etc please use: [l=Sepia Records (2)]</profile><data_quality>Needs Vote</data_quality><urls/></label>
+<label><id>18</id><name>Soma Quality Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Founded in 1991 by [a=Dave Clarke (7)] &amp; [a=Slam] Soma Quality Recordings is a successful Scottish electronic label which has been releasing tracks in the house/tech-house/techno vein; [a=Daft Punk]'s debut releases were on Soma and the label roster includes artists like Slam, Funk D'Void, H-Foundation, Percy X and many more.&#13;
+The company behind the label is [l270709].&#13;
+The publishing entities are [l295038], and, since 2002, [l=SPG Publishing UK Ltd]&#13;
+LC 12668&#13;
+&#13;
+Name variations as found on this profile:&#13;
+- Soma Quality Recordings&#13;
+- Soma Records&#13;
+- Soma Recordings - England&#13;
+</profile><data_quality>Needs Vote</data_quality><parentLabel id="270709">Soma Recordings Ltd.</parentLabel><urls><url>http://www.somarecords.com</url><url>http://soma-records.bandcamp.com</url><url>http://www.facebook.com/SomaRecords</url><url>http://www.myspace.com/somarecords</url><url>http://soundcloud.com/soma</url><url>http://twitter.com/SomaRecords</url><url>http://www.youtube.com/user/OfficialSomaRecords</url></urls><sublabels><label id="646">Fenetik Music</label><label id="4133">Fifth Freedom</label><label id="57766">Pnuma</label><label id="127392">Paragraph</label><label id="995826">Soma Track Series</label><label id="1838538">Avoidant</label><label id="2443396">Louder Than Chaos</label><label id="2582230">Archive Edits</label><label id="3500191">Collective Process</label></sublabels></label>
+<label><id>19</id><name>Track Mode</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label based in Brooklyn, New York City.&#13;
+Run by [a=Brett Dancer].</profile><data_quality>Correct</data_quality><parentLabel id="276691">Track Mode Recordings Inc.</parentLabel><urls/><sublabels><label id="379236">TMR Classics</label><label id="417286">TMR Essentials</label></sublabels></label>
+<label><id>20</id><name>Moody Recordings</name><profile>House label based in Chicago.&#13;
+Run by [a=William Renkosik] aka [a=Bad Boy Bill].</profile><data_quality>Needs Vote</data_quality><parentLabel id="4146">Mix Connection Multimedia</parentLabel><urls><url>http://www.mixconnection.com</url><url>http://www.facebook.com/pages/Moody-Recordings/150030428496885</url></urls></label>
+<label><id>21</id><name>Drop Music</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Pivotal UK House record label &#13;
+First release was actually released under label name [l=Drop Records (7)].&#13;
+&#13;
+After years of beans on toast, spending any spare pennies on vinyl, lugging sound systems around fields and clubs and playing free parties, the brainchildren behind Inland Knights thought it might be time to spread the music and start a label.&#13;
+&#13;
+The recipe was simple and Drop Music was born.&#13;
+Home of the Inland Knights </profile><data_quality>Needs Vote</data_quality><parentLabel id="87408">Raise Recordings</parentLabel><urls><url>https://drop-music.bandcamp.com/</url></urls><sublabels><label id="87408">Raise Recordings</label></sublabels></label>
+<label><id>22</id><name>Dope Dragon</name><profile>Drum n Bass, Jungle label based in Bristol, UK.&#13;
+Years active 1995-2006, now defunct.
+</profile><data_quality>Correct</data_quality><parentLabel id="119">Full Cycle Records</parentLabel><urls/></label>
+<label><id>23</id><name>Grayhound Recordings</name><profile>Grayhound Recordings was a pioneering dance label and recording studio whose unique vision was to fuse elements of House, Dub, Techno and Psychedelic Funk. The first five releases in 1998 were co-productions from DJ Garth of San Francisco's  Wicked Crew who owns and runs the imprint. Grayhound was an off-shoot of the short-lived Wicked Records project whose memorable hit was DJ Garth &amp; ETI's "Twenty Minutes of Disco Glory," from 1996.
+
+The label went on to expand it's roster including a stable of like-minded artists: Rocket (Garth &amp; Eric James), DJ Garth &amp; E.T.I., Crosstown Traffic (Garth &amp; Rob Doten), Michoacan, Garth &amp; Markie Mark, Jeno, DJ Harvey, Stranger (Ben Cook), Nectar, DJ Rasoul, Doc Martin, Dano &amp; Joeski, Rob Paine, Defenders of the Faith, Mirror Boys (Thomas Bullock), Perry Farrell, Community Recordings, EBE, Audio Soul Project, Nick Chacona, Joshua Collins, Patrick Turner, Charles Spencer, Succulent &amp; Mayaku. 
+
+Since 1998 Grayhound has released over 54 vinyl singles, and there have been three compilation CD's culled from the catalogue and mixed by Garth.
+
+All Vinyl prior to GND054 was mastered by George Horn at Fantasy Studios in Berkeley, CA with artwork from James Bates at Atom Design in London.
+
+Garth's tracks have been featured in two films: Sony Music's "Groove," and Gus Van Sant's "Speedway Junky." Grayhound songs have been licensed in dozens of high profile DJ compilation mix CD's.
+
+GND054- DJ Garth &amp; E.T.I. – Twenty Minutes Of Disco Glory 30 yr anniversary was the first release since the relaunch in 2026</profile><data_quality>Needs Vote</data_quality><urls/></label>
+<label><id>24</id><name>Immigrant</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Immigrant Records was founded in 1998 in California by British DJ/Producer [a=Robin Porter] and has since released 40+ releases from 75+ international artists on vinyl, CD and digital formats. The label now operates from Manchester, UK. The sound of the label was shaped in the early 90's by established artists such as John Tejada, Casey Hogan, Alexi Delano and Kenneth Graham and Jamie Anderson, who laid the foundation for new talent to emerge - artists such as Subb-an, Jamie Jones  Maetrik, Lucas Rodenbush, Noah Pred, John Dahlback, Todd Bodine, Franklin De Costa, Jens Bond, Felipe Venegas, Jay Bliss, Mihai Popoviciu and Santos Resiak to name a few.</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.weareimmigrant.com</url><url>http://www.beatport.com/label/immigrant-records/604</url><url>http://www.facebook.com/pages/Immigrant-Records/36685556008</url><url>https://soundcloud.com/weareimmigrant</url><url>https://twitter.com/weareimmigrant</url><url>http://www.residentadvisor.net/record-label.aspx?id=904</url><url>http://instagram.com/weareimmigrant</url><url>https://www.youtube.com/channel/UCMB91KcDX8tQyyP1lFYZDKQ</url><url>https://uk.pinterest.com/immigrant0267/</url><url>https://www.mixcloud.com/weareimmigrant/</url></urls><sublabels><label id="10186">Shva Muzik</label><label id="21705">Traxstars</label><label id="72187">Immigrant Digital</label></sublabels></label>
+<label><id>25</id><name>Mixer</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Mixer (The Future Sound Of America). &#13;
+&#13;
+US-based electronic music magazine, run by UK parent company, [l=DMC], who also release the similar "[l=Mixmag]" magazine in the UK. &#13;
+</profile><data_quality>Needs Vote</data_quality><parentLabel id="4243">DMC</parentLabel><urls><url>http://www.mixermag.com</url></urls></label>
+<label><id>26</id><name>Intrinsic Design</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Was Part of [l=UCMG New York] label group. Now part of the Rhythmic Label Group [l=Rhythmic NYC]</profile><data_quality>Needs Vote</data_quality><parentLabel id="96715">Rhythmic Inc.</parentLabel><urls/></label>
+<label><id>27</id><name>Leaf Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Founded in 1996 by [a=DJ Buck], along with Little T and Graham Boothby.</profile><data_quality>Correct</data_quality><urls><url>http://www.techno.ca/leafrecordings/</url></urls><sublabels><label id="11026">Village Sound</label></sublabels></label>
+<label><id>28</id><name>Deep Vision Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>[a=Sandy Rivera]'s label.&#13;
+[a=Matt Mau] helped to run the label in the early 2000s.</profile><data_quality>Needs Vote</data_quality><parentLabel id="419345">Deep Vision Records, Inc.</parentLabel><urls><url>http://www.facebook.com/deepvisionz</url><url>https://www.youtube.com/c/deepvisionz</url></urls><sublabels><label id="13604">Aurei Records</label><label id="899981">Deep Visionz Recordings Inc</label></sublabels></label>
+<label><id>29</id><name>Recline</name><profile>Deep tech-house label owned by DJ/producer [a=Pete Moss] in Philadelphia, US.&#13;
+&#13;
+For publishing, please use [l=Recline Music]&#13;
+For recording, engineering, etc., please use [l=The Recline Center]</profile><data_quality>Needs Vote</data_quality><urls/></label>
+<label><id>30</id><name>Palette Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>California (USA) Palette Recordings was started by [a=John Tejada] in the fall of 1996. It was set up as an outlet to release his own work. Many years later it has become the primary label to release Tejada's work.</profile><data_quality>Correct</data_quality><urls><url>http://www.paletterecordings.com</url></urls></label>
+<label><id>31</id><name>Mosaic</name><profile>UK record label founded and run by [a=Steve O'Sullivan].</profile><data_quality>Needs Vote</data_quality><urls><url>https://www.facebook.com/wisecaucasian/</url><url>https://soundcloud.com/stephenos1</url><url>https://steveosullivan-mosaicrecords.bandcamp.com/</url></urls><sublabels><label id="3351">Bluespirit</label><label id="3383">Bluetrain</label><label id="5773">Echo Motif</label><label id="7417">Green/As It Is</label><label id="390786">Red Label (5)</label><label id="2018634">Mosaic DTL</label><label id="3437068">Mosaic Versus</label></sublabels></label>
+<label><id>32</id><name>Worship Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Worship Recordings was established in the summer of 1998 in Philadelphia by Rob Paine. The concept was simple at first: they just wanted to put out their own music their own way. After the first few releases it became clear that they had dropped in on a genre of house music that has slowly but surely come to fruition, now being labeled by the massive as "dub house". They knew they were not the first to use the influence of Jamaican reggae music as a foundation for their house productions, but they definitely wanted to continue to push it to new heights in both the house community and progressive reggae scene. &#13;
+&#13;
+What started out as an in-house production label, Worship soon started to sign like- minded artists such as: Garth, Chris Udoh, Pete Moss, Solomonic Sound, Hakan Lidbo, Jay Tripwire and Grant Dell- just to name a few. Some Worship releases are more dub than house and vice versa - but all releases are pure quality. From the music’s production quality to the legendary KLH art work and right down to the packaging, Worship Recordings is never slacking. They continue to explore new methods of using reggae and house music side by side to reach lovers of both sounds and to unite them in the dance hall as ONE.</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.worshiprecs.com</url><url>https://worshiprecordings.bandcamp.com</url><url>https://www.facebook.com/worshiprecordings</url><url>https://twitter.com/worshiprecs</url><url>https://www.instagram.com/worshiprecordings/</url></urls><sublabels><label id="51594">Shakedown Recordings</label></sublabels></label>
+<label><id>34</id><name>Statra Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Founded by Brooklyn native [a=Dave Tomaselli] in April 1999. </profile><data_quality>Needs Vote</data_quality><parentLabel id="427093">Statra, Inc.</parentLabel><urls/><sublabels><label id="12810">Statrax</label><label id="20416">Pool Party</label><label id="50678">Statravel</label><label id="335913">Statra Chewins</label><label id="731645">Statra Inc.</label></sublabels></label>
+<label><id>35</id><name>Ovum Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label based in Philadelphia, Pennsylvania.&#13;
+Founded in 1994 by [a=Josh Wink] and [a=King Britt] with [a=Matt Brookman] in charge of A&amp;R. &#13;
+Distributed by [l=Sony] between 1996 and 2000.</profile><data_quality>Needs Vote</data_quality><parentLabel id="671864">Ovum Recordings Inc.</parentLabel><urls><url>http://www.ovum-rec.com</url><url>http://www.ovumrecordings.com</url><url>http://ovumrecordings.bandcamp.com</url><url>http://www.facebook.com/OvumRecordings</url><url>http://www.flickr.com/photos/ovumrecordings</url><url>http://instagram.com/ovumrecordings</url><url>http://soundcloud.com/ovumrecordings</url><url>http://twitter.com/ovumrecordings</url><url>http://en.wikipedia.org/wiki/Ovum_Recordings</url><url>http://www.youtube.com/user/ovumrecordings</url></urls></label>
+<label><id>36</id><name>End Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>From December 1995 The End flew the flag for underground dance music in London. It has had unparalleled growth over three years with residencies from the worlds finest DJ's in all musical genres. Founded by Mr C and Layo Paskin, The End was also the birthplace of End Recordings. The labels' output can be broadly defined as representing the new hybrid sounds, which mould together techno, house and breakbeat. The End closed the doors for one last time on 24th January 2009.&#13;
+&#13;
+It’s was The End of The End as we know it… 
+</profile><data_quality>Correct</data_quality><urls><url>http://www.endclub.com</url><url>http://www.endrecordings.co.uk</url></urls></label>
+<label><id>37</id><name>Zebra Recordings</name><data_quality>Correct</data_quality><urls/></label>
+<label><id>38</id><name>Metro Trax Records</name><profile>[a=DJ Romain] aka [a=Romain Gowe]'s label.</profile><data_quality>Needs Vote</data_quality><urls><url>http://twitter.com/metrotrax</url><url>http://www.facebook.com/metrotrax</url><url>http://soundcloud.com/metrotrax</url><url>http://www.mixcloud.com/metrotrax</url><url>http://www.youtube.com/channel/UCEwrPElHlV47XA2lpBSctLw</url></urls></label>
+<label><id>39</id><name>i! Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label based in Newark, New Jersey.&#13;
+Founded in 1993 by childhood friends [a=George Calle] and [a=Joseph Ventola].&#13;
+Label manager: [a=Dave Lare].</profile><data_quality>Needs Vote</data_quality><parentLabel id="700780">i! Recordings</parentLabel><urls><url>https://x.com/IRecords</url><url>https://www.facebook.com/theirecordsmusic</url><url>https://www.youtube.com/user/IRecordingsUSA</url><url>https://www.youtube.com/user/TheIRecordsMusic</url><url>https://irecordings.bandcamp.com/</url></urls><sublabels><label id="10195">Plate</label><label id="14198">Evenup</label><label id="20547">FNS Records</label><label id="35150">Yield</label><label id="39671">6-4</label><label id="58634">i2 Records</label><label id="78464">Cronic Records</label><label id="676147">i! Black Label</label><label id="1100915">i! Records Classics</label></sublabels></label>
+<label><id>40</id><name>Loaded Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>British house music label. &#13;
+&#13;
+Started by DJs and club promoters [a=Tim Jeffery] and [a=JC Reid] in 1990, the philosophy of the label was that, as in life, variety is the spice. It quickly established itself as one of the leading UK house labels with classic tracks by Plez, Wildchild, Luke Slater, and Ramp. &#13;
+&#13;
+[a=Andy Mac] was the label manager. &#13;
+&#13;
+Success in the mid 1990s came with artists like Pizzaman and Slacker, more recently they have consolidated themselves as one of the most consistent UK house labels with releases from Soul Grabber, Annie, Laid, Hakan, and Tribalation. &#13;
+&#13;
+Ex-sister label to other Brighton, UK based label, [l=Skint]. The label's parent company was acquired by BMG Rights Management in 2014.</profile><data_quality>Needs Vote</data_quality><parentLabel id="507880">Loaded Records Limited</parentLabel><urls><url>http://www.loadedrecords.com</url><url>http://www.youtube.com/channel/UCzv2gTGWflnjBWnb6NVb4TA</url></urls><sublabels><label id="302987">Loaded Studios</label></sublabels></label>
+<label><id>41</id><name>Fathom</name><profile>Fathom is an ambient sub-label of Hearts Of Space Records featuring releases by [a=Steve Roach], [a=Robert Rich], and others.&#13;
+It was created in 1994.</profile><data_quality>Correct</data_quality><parentLabel id="72919">Hearts Of Space Records</parentLabel><urls><url>https://www.hos.com</url></urls></label>
+<label><id>42</id><name>Viva!</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House music label from Seattle, WA, USA, founded in early 1998.</profile><data_quality>Needs Vote</data_quality><parentLabel id="3004747">Viva Recordings (3)</parentLabel><urls><url>http://www.viva-recordings.com/</url><url>http://www.myspace.com/vivarecordings</url><url>http://twitter.com/vivarecordings</url><url>http://facebook.com/vivarecordings</url><url>http://soundcloud.com/viva-recordings</url></urls><sublabels><label id="4160">squid:records</label></sublabels></label>
+<label><id>43</id><name>Axis</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>American techno label founded by [a=Jeff Mills] in 1992.</profile><data_quality>Needs Vote</data_quality><parentLabel id="1175241">Axis Records (10)</parentLabel><urls><url>http://www.axisrecords.com</url><url>http://axisrecords.bandcamp.com</url><url>http://www.youtube.com/user/AxisRecords1</url></urls><sublabels><label id="46">Purpose Maker</label><label id="333">Tomorrow</label><label id="4504">Luxury Records</label><label id="15681">6277</label><label id="176113">Something In The Sky</label><label id="349357">Taken</label><label id="1575700">Str Mrkd</label><label id="1829087">Every Dog Has Its Day</label><label id="3331632">Axis Expressionist Series</label></sublabels></label>
+<label><id>44</id><name>Nordic Trax</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Nordic Trax originally began as a sub-label of Vancouver acid jazz label Mo Funk in 1997. After one release it became a separate entity, it's only release (NT001) was sold to the newly formed Nordic Trax and the label has been run by owner/operator Luke McKeehan from Vancouver ever since.</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.nordictrax.com</url><url>http://nordictrax.bandcamp.com</url><url>http://soundcloud.com/nordic-trax</url><url>http://www.mixcloud.com/nordictrax</url><url>https://www.youtube.com/@NordicTrax</url><url>https://linktr.ee/nordictrax</url><url>http://www.twitter.com/NordicTrax</url><url>http://instagram.com/nordictrax</url><url>http://www.facebook.com/NordicTrax</url><url>https://www.tiktok.com/@nordictrax</url></urls></label>
+<label><id>45</id><name>Groovin' Records</name><profile>[a=Jose "Choco" Reynoso]'s label.</profile><data_quality>Needs Vote</data_quality><urls/></label>
+<label><id>46</id><name>Purpose Maker</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Purpose Maker is run by [a=Jeff Mills].</profile><data_quality>Correct</data_quality><parentLabel id="43">Axis</parentLabel><urls><url>http://www.axisrecords.com</url></urls></label>
+<label><id>47</id><name>IntelliNET</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Canadian distribution company (and occasionally a record label) owned and operated by Richie Hawtin &amp; John Acquaviva. Distributed all the in-house labels under the Plus 8 umbrella (Plus 8, Probe, Definitive, etc.) as well as labels from other artists (Intangible, Acacia, Bomb, etc.).</profile><data_quality>Needs Vote</data_quality><urls/></label>
+<label><id>48</id><name>Wave Music</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Founded in 1995 by its owner [a=François Kevorkian] as a means to release cutting-edge but timeless music that doesn't necessarily fit the norm of what most people come to expect of a New York 'dance' indie label. Rather than concentrating on a specific style, the label's mission has been to bring out an eclectic and musically varied selection of music.&#13;
+Manufactured and distributed [l=Bombay Records (2)], [l=Chez Music], [l=Clairaudience] and [l=Tribal Winds] in the late 1990s/early 2000s.</profile><data_quality>Needs Vote</data_quality><parentLabel id="425694">Wave Entertainment Group, Inc.</parentLabel><urls><url>http://www.wavemusic.com</url><url>http://www.facebook.com/pages/Wave-Music/37739821435</url></urls><sublabels><label id="4004">Clicktracks</label><label id="28546">Deep Space Media</label><label id="28997">Streetwave Music</label><label id="29438">WaveTec</label><label id="127783">Wave Classics</label></sublabels></label>
+<label><id>49</id><name>Cytrax</name><profile>Cutting edge minimal techno label.&#13;
+Operated by [url=http://www.discogs.com/artist/Jasper]John Mendez[/url], [a2432085] and [a395].&#13;
+</profile><data_quality>Correct</data_quality><urls/><sublabels><label id="4256">Delay</label></sublabels></label>
+<label><id>50</id><name>Fair Park</name><profile>House label based in Dallas, Texas.
+Founded by [a=Mike Constantino], [a=Sean Holland] and [a=Scott Osler].</profile><data_quality>Needs Vote</data_quality><parentLabel id="1713782">Fair Park Records</parentLabel><urls/></label>
+<label><id>51</id><name>Electrik Soul</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><data_quality>Needs Vote</data_quality><parentLabel id="212"></parentLabel><urls><url>https://www.youtube.com/channel/UCkaNRMUUwXGojkvh1Tt7hXw</url></urls></label>
+<label><id>52</id><name>Low Pressings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>UK Breakbeat/House/Techno label started in 1997.&#13;
+&#13;
+Run by [a=Chas Burns] (UK) &amp; [a=Hernan Cerbello] (Argentina) since 2008.&#13;
+&#13;
+Digital distribution by [l=INgrooves].&#13;
+</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.lowpressings.com</url><url>http://www.facebook.com/LowPressings</url><url>http://www.myspace.com/lowpressings</url><url>http://soundcloud.com/lowpressings</url></urls><sublabels><label id="12250">Room 4 Recordings</label><label id="19465">Beat Code</label><label id="21471">More Devotion</label><label id="27751">Boxa Records</label><label id="32394">Tight Records</label><label id="43580">Low Pressings Limited</label></sublabels></label>
+<label><id>53</id><name>Camouflage Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><data_quality>Correct</data_quality><parentLabel id="82">83 West Records</parentLabel><urls/></label>
+<label><id>54</id><name>Cross Section Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Head of Music - [a=Chris Simmonds].&#13;
+Founded by Lorraine Burrell in 1994 to promote the works and dj skills of Chris Simmonds, Magoo aka Private Funk, Brian Royer, Ray Gibbons, Tim Deluxe, Mark Dolly Rockers Jones (Shuffle) Mike Huckaby, Matt Jones, Arturo Garces and Jade Cox to name a few as the Cross Section Collective. &#13;
+</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.crosssectionmusic.com</url><url>http://www.facebook.com/CrossSectionRecords</url><url>http://www.instagram.com/chris_simmonds2016</url><url>http://www.myspace.com/crosssectionmusic</url><url>http://twitter.com/crossxsection</url><url>http://www.youtube.com/channel/UCl9bWJo3enI8f7VUBz7RY1w</url></urls></label>
+<label><id>55</id><name>Transport Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Dedicated to the true deep house heads all over the world, Transport Recordings is located in the heart of San Francisco. Formed in December of 1998 by producer [a34], [a524519] (aka [a28891]) and [a74994], the label came about as an outlet to release deep, timely, West Coast based house music.&#13;
+&#13;
+&#13;
+</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.transportrecordings.com</url><url>http://www.facebook.com/TransportRecordings</url><url>http://www.facebook.com/ON-AIR-with-DJ-MFR-401023759976170</url><url>http://soundcloud.com/dj-mfr</url></urls></label>
+<label><id>56</id><name>Rising High Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Label founded in London UK in February 1991 by [a=Caspar Pound]. Had sister labels [l=Ascension Records] (for dance music), [l=Sapho] (for more avant-garde experimental releases) and [l=Rising High USA] (in America). Rising High Productions Ltd is a dead company but the labels are not defunct - they are owned by Caspar's daughter Sapho. The music is being reissued to digital over 2015, some remastered.&#13;
+&#13;
+See also [r=524424] on Freakin' Australia, [r=90935] on Sony Japan and several releases licensed to [l=Instinct Records].&#13;
+&#13;
+The missing RSN 47 is the [r=27120] released on the sublabel [l=Sapho] where "RSN 47" appears etched in the runout groove.&#13;
+&#13;
+The missing RSN 58 is the [r=80684] released on the sublabel [l=Ascension Records] where "RSN 58" appears etched in the runout groove.</profile><data_quality>Correct</data_quality><parentLabel id="319988">Rising High Productions Ltd.</parentLabel><urls><url>http://www.facebook.com/RisingHighRecords</url><url>http://soundcloud.com/rising-high-records</url><url>http://twitter.com/RisingHighRecs</url><url>http://en.wikipedia.org/wiki/Rising_High_Records</url></urls><sublabels><label id="2885">Sapho</label><label id="3101">Ascension Records</label><label id="15496">Rising High USA</label><label id="55784">Blue Angel Records</label><label id="320568">Harthouse U.K.</label><label id="491589">The Secret Life Of Trance</label><label id="759554">Chill Out Or Die</label><label id="1747242">Rising High (2)</label></sublabels></label>
+<label><id>57</id><name>Distance</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>French label founded in 1994 by [a=Jean Karakos], specialising in dance music ranging from ambient, techno, Goa trance and house.&#13;
+The label ceased releasing records in 2003 but re-surfaced in 2011 with a series of re-issues.&#13;
+See [l=Distance Records (3)] or [l=Distance Music] for company credits.</profile><data_quality>Needs Vote</data_quality><parentLabel id="3214637">Karakos Productions &amp; Publishing</parentLabel><urls><url>https://www.karakosproductions.com/distance/en/</url></urls><sublabels><label id="939">Substance</label><label id="18116">Question Mark ?ecords</label><label id="712110">Melting Pop</label><label id="712898">Polyester Records (3)</label></sublabels></label>
+<label><id>58</id><name>A13</name><profile>Mid-90s techno label based in Essex, UK. Now defunct.</profile><data_quality>Correct</data_quality><urls/></label>
+<label><id>59</id><name>Tresor</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>German Berlin-based techno label started in July 1991 by [a=Dimitri Hegemann], taking its name from the techno club set up in an underground vault following the fall of the Berlin Wall.&#13;
+Formerly a division of [l539935].&#13;
+[b]Label Code: LC 3702 / LC 03702[/b]</profile><data_quality>Needs Vote</data_quality><parentLabel id="452342">Tresor Records GmbH</parentLabel><urls><url>https://tresorberlin.com/</url><url>https://tresorberlin.bandcamp.com/music</url><url>https://www.facebook.com/tresorberlin</url><url>https://www.flickr.com/photos/tresorberlin</url><url>http://www.instagram.com/tresorberlin</url><url>https://linktr.ee/tresorberlin</url><url>https://myspace.com/tresorberlin</url><url>https://soundcloud.com/tresorberlin</url><url>https://www.tiktok.com/@tresor.berlin</url><url>https://twitter.com/TresorBerlin</url><url>https://en.wikipedia.org/wiki/Tresor_(club)</url><url>https://www.youtube.com/channel/UCTy2NM-Gdpmz_1667ZXoZ6A</url></urls><sublabels><label id="5772">Supremat</label><label id="459262">Globus Mix</label><label id="508992">Archiv (3)</label><label id="571401">Kern</label><label id="1050537">Values</label><label id="1920718">Tresor Compilation</label><label id="1921015">Annex (4)</label><label id="2987818">Tresor 30 Years</label></sublabels></label>
+<label><id>60</id><name>Fax +49-69/450464</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Fax +49-69/450464 was founded in late 1992 by [a=Peter Kuhlmann]. &#13;
+[b]Label Code: LC 6269[/b].&#13;
+It was distributed via Neuton for the German market, and by Belgian N.E.W.S. Distribution for the rest of the world.&#13;
+&#13;
+FAX's own releases are distinguished by the catalogue numbers.&#13;
+Catalog numbers starting with PK (Peter Kuhlmann) feature work by [a=Pete Namlook] (= Peter Kuhlmann), either solo or in collaboration with other artists.&#13;
+Catalog numbers starting with PS (Peter's Sublabel) are for releases by other artists, without Namlook's involvement. &#13;
+Catalog numbers starting with PW (Peter's Worldlabel) indicate collaborations of a more international character than the above (PK and PS releases are mainly, although not exclusively, German artists). The "World" sublabel should not be confused with the [l=Ambient World] sublabel.&#13;
+The FAX releases are strictly limited, depending on the project. Most released are produced in editions of 500, 1000, 2000 or 3000 copies.&#13;
+Some specific titles were licensed out to other labels ([l=Music Man Records], [l=R &amp; S Records] and [l=Rising High Records] to name the most common licensees) for unlimited distribution in FAX's early days. Due to problems with distribution and licensing, the in-house Ambient World sublabel was founded to handle re-releases of out-of-print Fax titles.&#13;
+Ambient World is a sublabel of FAX, catalog numbers starting with AW. AW only publishes re-releases with unlimited distribution, but with a different cover design (and occasionally different tracks or edits).&#13;
+There are a few other special catalog numbers: FAX Musical Postcards were issued in very limited quantities as part of the Season's Greetings series and have the SEA catalog numbers. Yesterday And Tomorrow releases are used for an ambient/classical fusion and recieve the YT catalog numbers. The PKPWPS catalog numbers are used for compilations.&#13;
+Most people are confused by the artist naming. The project names of collaborations are the artist name.&#13;
+</profile><data_quality>Needs Vote</data_quality><urls><url>http://music.hyperreal.org/labels/fax/</url><url>http://web.archive.org/web/20121218084928/http://www.namlook.de/</url><url>http://web.archive.org/web/20170107215511/http://www.2350.org/</url></urls><sublabels><label id="8">Rather Interesting</label><label id="2651">Ambient World</label><label id="6191">Yesterday &amp; Tomorrow</label><label id="951847">Seasons Greetings</label><label id="2638882">S.H.A.D.O</label><label id="2755352">Faxlabel.com</label></sublabels></label>
+<label><id>61</id><name>Instinct Ambient</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Instinct Ambient was a sub-label of Instinct active from 1995 through 1997. Initially focusing on pure ambient works, the later releases on the label also featured trip-hop and downtempo drum'n'bass sounds.&#13;
+&#13;
+Some titles were also released in Europe on a [l=KK Records] sub-label called [l=Instinct Ambient Europe].&#13;
+&#13;
+Instinct has released some titles under the [l359548] banner after 1997, but they no longer use the Instinct Ambient label, and instead release them on the main label.&#13;
+</profile><data_quality>Needs Vote</data_quality><parentLabel id="63">Instinct Records</parentLabel><urls/><sublabels><label id="359548">Ambient Systems</label><label id="833073">Instinct Ambient Monthly Series</label><label id="1187152">Chillout (2)</label></sublabels></label>
+<label><id>62</id><name>Eukahouse</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><data_quality>Correct</data_quality><parentLabel id="924">Eukatech</parentLabel><urls/></label>
+<label><id>63</id><name>Instinct Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Founded as a dance label in a Greenwich Village living room, Instinct Records gained prominence in the early 1990s by releasing compilations of [l=Acid Jazz]-label material in the US. The simultaneous success of the label's first signing, electronic musician [a=Moby], was built on by licensing and releasing seminal recordings from [l=Rising High Records], [l=Kickin Records], and [l=Antler-Subway], as well as releasing music by local techno-oriented ambient musicians signed to the label. Instinct was purchased by [l=Knitting Factory Records] in 2003.&#13;
+&#13;
+For company credits, please use [l=Instinct Records, Inc.] if credited with "Inc".</profile><data_quality>Needs Vote</data_quality><parentLabel id="145466">Knitting Factory Records</parentLabel><urls><url>https://web.archive.org/web/20061130112144/http://www.instinctrecords.com/</url></urls><sublabels><label id="61">Instinct Ambient</label><label id="204">Shadow Records</label><label id="381">Liquid Music</label><label id="2078">Sonic Records</label><label id="3550">Terra Firma</label><label id="8114">Earth Recordings</label><label id="45265">Instinct Jazz</label><label id="63307">Kickin Records USA</label><label id="379741">This Is Acid Jazz</label><label id="585039">Evolver (2)</label><label id="789378">Plug In + Turn On</label><label id="854027">FAX USA</label><label id="987127">Trance Atlantic Records</label><label id="1117117">Instinct Electronica</label><label id="1166717">The Future Sound Of Jazz</label><label id="3096304">King Of The Jungle (2)</label></sublabels></label>
+<label><id>64</id><name>Ritual Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Boston-based label run by Mike Walsh, Matthew Sordillo, and [a=Francis Englehardt].</profile><data_quality>Correct</data_quality><urls><url>http://www.ritualrecordings.com</url></urls></label>
+<label><id>65</id><name>Airtight</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House music label from London, United Kingdom. Sublabel of Hooj Choons. 
+For companies, see: [l=Airtight Recordings] / [l=Airtight Ltd.].</profile><data_quality>Needs Vote</data_quality><parentLabel id="238">Hooj Choons</parentLabel><urls><url>https://www.facebook.com/airtightrecordings/</url><url>https://twitter.com/AirtightRecords</url><url>https://soundcloud.com/airtight-recordings</url></urls></label>
+<label><id>66</id><name>Pagan</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label from London, UK. &#13;
+** May appear as: [b]Pagan United Kingdom[/b],&#13;
+The American branch is: [l=Pagan America].</profile><data_quality>Needs Vote</data_quality><parentLabel id="339943">Pagan Records (6)</parentLabel><urls><url>http://web.archive.org/web/20040413022131/http://www.paganrecords.com/</url><url>http://web.archive.org/web/20000816092701/www.ark21.com/pagan/</url></urls></label>
+<label><id>67</id><name>MAW Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label based in Union City, New Jersey.&#13;
+Founded by [a=Steve Rosen] and his onetime management clients [a=Louie Vega] and [a=Kenny "Dope" Gonzalez] aka [a=Masters At Work].&#13;
+Manufactured and distributed by [l=Strictly Rhythm] when it launched in 1995.&#13;
+Relaunched in April 2021.</profile><data_quality>Needs Vote</data_quality><parentLabel id="308269">MAW Records, Inc.</parentLabel><urls><url>http://mastersatwork.bandcamp.com</url><url>http://www.linkedin.com/company/maw-records</url><url>http://soundcloud.com/user-983912382</url></urls><sublabels><label id="23993">MAW Classic</label></sublabels></label>
+<label><id>68</id><name>Residual Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Titonton Duvante's label&#13;
+Founded: Fall 1998&#13;
+Location: Columbus, Ohio&#13;
+Genre: Electronic&#13;
+</profile><data_quality>Correct</data_quality><urls><url>https://www.facebook.com/residualrek</url><url>https://www.residentadvisor.net/record-label.aspx?id=11231</url><url>https://twitter.com/_Residual_</url><url>https://soundcloud.com/residual-recordings</url></urls><sublabels><label id="1285384">Residual Classic</label></sublabels></label>
+<label><id>69</id><name>Yoshitoshi Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Washington, D.C. based label founded in 1994 by [a=Deep Dish].&#13;
+&#13;
+Label Code: LC 48435</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.yoshitoshi.com</url><url>http://yoshitoshi.bandcamp.com</url><url>http://www.facebook.com/pages/Yoshitoshi-Recordings/47614331223</url><url>http://instagram.com/yoshitoshirecs</url><url>http://www.myspace.com/yoshitoshirecordings</url><url>http://soundcloud.com/yoshitoshi</url><url>http://twitter.com/Yoshitoshi</url><url>http://www.youtube.com/YoshitoshiRecordings</url></urls><sublabels><label id="1419">Shinichi</label><label id="354403">Yo! Recordings</label></sublabels></label>
+<label><id>70</id><name>7th City</name><profile>[b]Established:[/b] 1992&#13;
+[b]Country:[/b] USA&#13;
+[b]City:[/b] Detroit&#13;
+[b]Founder:[/b] [a=Daniel Bell]&#13;
+7th City was created as a sublabel of [l=430 West].&#13;
+Distributed by [l=Accelerate] and [l=7th City Distribution].&#13;
+Manufactured by [l=accelerate (2)].</profile><data_quality>Needs Vote</data_quality><parentLabel id="1596042">Seventh City Records</parentLabel><urls><url>http://www.myspace.com/seventhcityrecords</url></urls></label>
+<label><id>71</id><name>Kool Groove Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House &amp; Dance Label run by [a=Reynald Deschamps]&#13;
+&#13;
+In 1987-88, Reynald formed his own distribution company [l=M.T.I.] (comprising [l=Kool Groove Records], [l=REY-D Records] and later USA ([l=United Sounds of America]). Distribution deal with [l=Apexton Records] which included the label called [l=Underworld Records]&#13;
+</profile><data_quality>Needs Vote</data_quality><urls/></label>
+<label><id>72</id><name>Dufflebag Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Dufflebag Recordings was founded in 1997 by [a258]. It has become a long time staple in underground house music community. Releasing music on its own schedule, Dufflebag has always favoured the quality of music over the quantity of releases.</profile><data_quality>Needs Vote</data_quality><urls><url>https://www.facebook.com/dufflebagrecords/</url><url>https://myspace.com/dufflebagrecordings</url></urls></label>
+<label><id>73</id><name>Ferox Records</name><profile>Ferox Records or shorter just [b]Ferox[/b] is the label of producer and DJ Russ Gabriel. Running since 1993, Ferox took an immediate stance at the forefront of U.K. techno. The label went into hiatus end of 1999. It was restarted briefly between 2007 and 2008. After a long break, the label started releasing vinyl again in 2014.</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.feroxrecords.com</url><url>http://www.funkybarberfilms.com</url><url>http://russgabriel.bandcamp.com</url><url>http://www.myspace.com/feroxrecords</url><url>http://soundcloud.com/russ-gabriel</url><url>http://twitter.com/ferox_records</url><url>http://twitter.com/FB_Films</url><url>http://www.youtube.com/user/FunkyBarberFilms</url></urls><sublabels><label id="3377">Soul On Wax</label><label id="8794">Berlin Records (2)</label><label id="14566">Inertia Records (2)</label></sublabels></label>
+<label><id>74</id><name>Pschent</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>French house music label, founded in 1994 by the late [a=Eric Hauville]. &#13;
+&#13;
+The label name "Pschent", is taken from the double crown worn by ancient Egyptian kings (hence the label logo), symbolic of dominion over Upper and Lower Egypt, which had previously been separate kingdoms. &#13;
+</profile><data_quality>Correct</data_quality><parentLabel id="267079">Wagram Music S.A.</parentLabel><urls><url>http://www.pschent.fr</url><url>http://www.soblondemanagement.com</url><url>http://www.facebook.com/pschentmusic</url><url>http://www.facebook.com/so.mgt</url><url>http://linktr.ee/Pschent</url><url>http://pinterest.com/pschentmusic</url><url>http://www.songkick.com/Pschent_Music</url><url>http://soundcloud.com/pschent</url><url>http://pschentmusic.tumblr.com</url><url>http://twitter.com/pschent</url><url>http://twitter.com/soblondemgt</url><url>http://www.youtube.com/PschentOfficial</url></urls><sublabels><label id="2011830">Paradise Garage (4)</label></sublabels></label>
+<label><id>75</id><name>Tweekin Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label from San Francisco, CA, USA.</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.tweekin.com</url><url>http://www.beatport.com/label/tweekin-records/716/releases?perPage=150</url></urls><sublabels><label id="16305">Next Of Kin</label><label id="18209">Synergize Communications</label></sublabels></label>
+<label><id>76</id><name>Kaos Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label based in Pontinha, Portugal.&#13;
+Run by [a=António Cunha].</profile><data_quality>Needs Vote</data_quality><parentLabel id="5102">Vidisco</parentLabel><urls><url>http://www.facebook.com/KaosRecordsPortugal</url><url>http://www.youtube.com/channel/UC3ovkFIu8SdXRr1RSkUryYA</url></urls><sublabels><label id="1420">Funktástica Records</label><label id="18775">Plastika (2)</label><label id="23065">Free Recordings</label><label id="119178">Fuga Records (2)</label></sublabels></label>
+<label><id>77</id><name>Elypsia</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Elypsia Records, a Brussels-based record label founded in 1995 which focusses on bringing innovative, groundbreaking electronic dance music.&#13;
+&#13;
+Related to:&#13;
+- [l=Elypsia Records]&#13;
+- [l=Elypsia Music]&#13;
+- [l=Elypsia Music Publishing]&#13;
+- [l=Elypsia Studios]</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.elypsiarecords.com</url><url>http://elypsiarecords.bandcamp.com</url><url>http://www.facebook.com/elypsiarecords</url><url>http://www.instagram.com/elypsiarecords</url><url>http://www.soundcloud.com/elypsiarecords</url><url>http://twitter.com/elypsiarecords</url><url>http://en.wikipedia.org/wiki/Elypsia_Records</url><url>http://www.youtube.com/channel/UCBdx4Kel_lfRlB1XkS__1Rg</url></urls></label>
+<label><id>78</id><name>Obsession Music</name><profile>Deep-House label from the 90’s, set up in Marseille, France (UE), by [b][url=https://www.discogs.com/artist/211334-DJ-Paul-4]DJ Paul[/url][/b] and friends.</profile><data_quality>Correct</data_quality><urls/><sublabels><label id="10976">Mesclum Records</label><label id="33201">Virgo Music</label><label id="61166">Distrix Records</label></sublabels></label>
+<label><id>79</id><name>V2 Records, Inc.</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>New York based record company, the last CEO was Holly Neiweem.  Legally operated under this name from 12 September 1996 to 17 January 1997, and again from 23 January 1997 to 25 July 2017.&#13;
+&#13;
+First NY legal entity number: 2065317&#13;
+Incorporated: 12 September 1996&#13;
+Name change: 17 January 1997 to 'V2 Holdings (USA), Inc.'&#13;
+Dissolved: 1 July 1997&#13;
+&#13;
+Second NY legal entity number: 2105412&#13;
+Incorporated: 23 January 1997&#13;
+Dissolved: 25 July 2017&#13;
+&#13;
+[b]Note:[/b] For the label please use &gt; [l=V2] or [l=V2 Records], depending on the logo shown on the release.</profile><data_quality>Needs Vote</data_quality><parentLabel id="212"></parentLabel><urls><url>https://apps.dos.ny.gov/publicInquiry/#search</url><url>https://opencorporates.com/companies/us_ny/2065317</url><url>https://opencorporates.com/companies/us_ny/2105412</url><url>http://web.archive.org/web/20040810085820/http://us.v2music.com/site/</url><url>http://web.archive.org/web/20090106113308/http://us.v2music.com/</url><url>https://myspace.com/v2records</url></urls><sublabels><label id="8229">MTA</label></sublabels></label>
+<label><id>80</id><name>Lumi Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Lumi Records was founded in 1993 by [a=Jori Hulkkonen], [a=Jukka Hautamäki], and [a=Ari Ruokamo] (aka [a=Ari Jukka]). Between 1993-1995 they released three infamous vinyl compilations, including tracks from various local Finnish artists. The label was put on hold, after a period of time, until 1999 when Ari restarted the label. &#13;
+</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.lumirecords.com</url></urls></label>
+<label><id>81</id><name>Mother Tongue</name><profile>USA&#13;
+&#13;
+See [l=Mother Tongue Records (2)] for the Italian record label.</profile><data_quality>Needs Vote</data_quality><parentLabel id="3272313">Mother Tongue Music NYC</parentLabel><urls/></label>
+<label><id>82</id><name>83 West Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label based in Toronto, Ontario.&#13;
+Run by [a=Peter Primiani] and [a=Tyrone Solomon].&#13;
+Listed on some releases as Eighty Three West Records.</profile><data_quality>Needs Vote</data_quality><parentLabel id="471114">83 West Records Ltd.</parentLabel><urls><url>http://83west.bandcamp.com</url><url>http://linktr.ee/83west</url><url>http://www.twitch.tv/83west</url></urls><sublabels><label id="53">Camouflage Recordings</label></sublabels></label>
+<label><id>83</id><name>SuperBra</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Label from Switzerland (EU), SuperBra covers the more tech-house side of music and is the sisterlabel of [l=Phont Music] (both distributed worldwide by [l=prime distribution], London, sometimes by [l=neuton], for Germany).&#13;
+The label was managed by [a=Stefan Riesen].&#13;
+</profile><data_quality>Correct</data_quality><parentLabel id="348">Phont Music</parentLabel><urls/></label>
+<label><id>84</id><name>Strive</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><data_quality>Correct</data_quality><parentLabel id="570">Tronic</parentLabel><urls><url>http://www.strivemusic.com</url></urls></label>
+<label><id>85</id><name>Earth</name><profile>[b]DO NOT USE.[/b] Please use [l4676331] instead.</profile><data_quality>Needs Vote</data_quality><parentLabel id="212"></parentLabel><urls/></label>
+<label><id>86</id><name>Compost Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>German electronic label, based in Munich. Founded by DJ [a=Michael Reinboth] in 1994. &#13;
+Label Code: LC 2518 / LC 02518&#13;
+Electronic artists such as [a=Moodymann], [a=Carl Craig], [a=Laurent Garnier], [a=Masters At Work], [a=Âme], [a=Dixon], [a=Henrik Schwarz], [a=Kruder &amp; Dorfmeister] have either contributed tracks of their own, remixes, or both.</profile><data_quality>Needs Vote</data_quality><parentLabel id="338104">Compost Medien GmbH &amp; Co. KG</parentLabel><urls><url>http://www.compost-rec.com</url><url>http://compostrecords.bandcamp.com/</url><url>https://compostcompilations.bandcamp.com/</url><url>https://www.facebook.com/compostrecords</url><url>http://www.instagram.com/compostrecords</url><url>https://www.mixcloud.com/Compost/</url><url>http://myspace.com/compostrecords</url><url>https://soundcloud.com/compost</url><url>https://vimeo.com/compostrecords</url><url>https://en.wikipedia.org/wiki/Compost_Records</url><url>https://www.youtube.com/@CompostRecords</url></urls><sublabels><label id="6193">Compose Records</label><label id="26767">Compute</label><label id="30803">Angora Steel</label><label id="69765">Drumpoet Community</label><label id="73171">Compost Black Label</label><label id="200435">Compost Disco</label><label id="239656">Derwin Recordings</label><label id="339065">Fueled For The Future</label><label id="339233">Glücklich</label><label id="396237">Future Sounds Of Jazz</label><label id="428434">Rumpelmusig</label><label id="484811">Elaste Records</label><label id="828643">I Like It (2)</label><label id="962052">Ennio Morricone Remixes</label><label id="1261106">Beat Art Department</label><label id="1625844">Freshly Composted</label><label id="2593156">Compost Selection</label><label id="3934110">Future Sounds Of Kraut</label></sublabels></label>
+<label><id>87</id><name>Freerange Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>[b]LC 12831[/b]&#13;
+London based Deep House label. Founded by Jamie Odell ([a=Jimpster]) and Tom Roberts.</profile><data_quality>Needs Vote</data_quality><parentLabel id="212"></parentLabel><urls><url>http://www.freerangerecords.co.uk</url><url>http://freerangerecords.bandcamp.com</url><url>http://www.facebook.com/FreerangeRecords</url><url>http://freerangerecords.podomatic.com</url><url>http://soundcloud.com/freerangerecords</url><url>http://twitter.com/FreerangeRec</url><url>http://www.youtube.com/user/freerangeuk</url></urls><sublabels><label id="355235">Freerange Records Colour Series</label></sublabels></label>
+<label><id>88</id><name>Nite Grooves</name><profile>House music label established in 1994 by [a=Hisa Ishioka].&#13;
+Sister label to [l=BPM King Street Sounds] and [l=Street King].</profile><data_quality>Needs Vote</data_quality><parentLabel id="545424">Hi's Production USA, Inc.</parentLabel><urls/></label>
+<label><id>89</id><name>Under The Counter</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Label owned by [a444].</profile><data_quality>Needs Vote</data_quality><urls/></label>
+<label><id>91</id><name>Panhandle Records</name><profile>San Jose / San Francisco - based house label. &#13;
+(Now defunct).</profile><data_quality>Needs Vote</data_quality><urls/></label>
+<label><id>92</id><name>Taka</name><profile>Subdivision techno tribe of the french label Chronobrain.</profile><data_quality>Correct</data_quality><parentLabel id="1433">Chronobrain</parentLabel><urls/></label>
+<label><id>93</id><name>Alola</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>UK&#13;
+Alola records was created by Omid " [a=16B]" Nourizadeh, as a musical journey throughout the years, going as far back as 1994 when Omid started it from his bedroom studio still living at his parents at only 19 years old. &#13;
+From the range of records Omid made himself through to multiple artists, alola has become an expression of love for proper HOUSE music..&#13;
+Regular Home to artists like Charles webster, Kevin McKay, Demi, Nav, Mr C, Pete Moss, Vince Watson, Echomen, Anthony Teasdale, Amin Edge, Trevor Loveys, Idjut Boys, DJ Q, Sultan &amp; Ned Shepard, Pop Out And Play, House of 909, Nacho Marco, Remote Control, YMC, Kevin Beber, Mode 2 and Omid himself.&#13;
+Alola has been releasing its own blend of Lush, Deep and Hypnotic House music ever since with a little break over the years ...x&#13;
+</profile><data_quality>Needs Vote</data_quality><urls><url>http://alola.co.uk</url><url>http://www.facebook.com/pg/AlolaRecords</url><url>http://www.twitter.com/AlolaRecords</url><url>https://alolarecords.bandcamp.com/</url></urls><sublabels><label id="2435">Disclosure</label><label id="272756">Alola Music</label><label id="277440">Alola Studios</label></sublabels></label>
+<label><id>94</id><name>Fiji Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Look deep into the ocean, feel the breeze, and listen to the music.</profile><data_quality>Needs Vote</data_quality><parentLabel id="11598">UCMG New York</parentLabel><urls><url>https://web.archive.org/web/20021224114515/http://www.ucmgny.com/labels/fiji.htm</url></urls></label>
+<label><id>95</id><name>Guidance Recordings</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Electronic label based in Chicago, Illinois.&#13;
+Founded by [a=Spencer Kincy], [a=Ivan Pavlovich], and [a=Rob Kouchoukos] in 1996.&#13;
+Listed on some releases as Guidance Records.</profile><data_quality>Needs Vote</data_quality><parentLabel id="284155">Guidance Recordings, Inc.</parentLabel><urls/><sublabels><label id="219">Crucial Sounds</label><label id="676">Subtitled Records</label><label id="2521">Chord 44 Records</label></sublabels></label>
+<label><id>96</id><name>Stickman Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label originally from Toronto now based in Montreal, Canada.</profile><data_quality>Needs Vote</data_quality><parentLabel id="647909">Finger Printz Entertainment Group</parentLabel><urls><url>www.stickmanrecords.com</url><url>https://soundcloud.com/user-110996857</url><url>http://www.instagram.com/stickmanrecordscanada</url></urls><sublabels><label id="17889">Placebo Recordings</label></sublabels></label>
+<label><id>97</id><name>Moods &amp; Grooves</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>American deep house, tech-house, and techno label, from Detroit, Michigan, USA, and run by [a=Mike Grant]. &#13;
+&#13;
+It starts in Detroit with a vision...&#13;
+Mike Grant assembled Moods &amp; Grooves Records in 1999. Its agenda includes presenting distinctive music for listening and dancing pleasure. Moods for the soul: sophistication, deepness and emotional expression. Grooves for the body: rhythms that massage one into movement with force and subtlety. Since its inception, Moods &amp; Grooves has been among the most consistent Detroit labels, continuing the musical legacy while forging new links with producers and listeners around the globe.&#13;
+And so it ends wherever there is a listener. Whether you are in Anchorage or Zimbabwe, we will we find you...&#13;
+&#13;
+</profile><data_quality>Correct</data_quality><parentLabel id="527426">Big 50 Entertainment</parentLabel><urls><url>http://www.big50entertainment.com/moods-and-grooves/about/</url><url>https://moodsandgroovesrecords.bandcamp.com/</url><url>https://soundcloud.com/moods-grooves-records</url><url>http://www.facebook.com/pages/Moods-Grooves-Records/54465188899</url></urls></label>
+<label><id>98</id><name>Defected</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>British dance music label founded by [a=Simon Dunmore].&#13;
+Former [l=Cooltempo] and [l=AM:PM] A&amp;R Dunmore incorporated parent company [l=Defected Records Ltd.] in September 1998 and launched Defected, with funding from [l=Ministry Of Sound], on 1 January 1999, when A&amp;M's owner PolyGram formally merged with [l=Universal Music Group].&#13;
+Janet Bell, Dunmore's promotions partner at AM:PM, with whom he launched the label, departed in December 2001 to run [l=Big Love].&#13;
+A&amp;R manager from 2004 to 2019: [a=Andy Daniell].&#13;
+Former MD [a=Wez Saunders] acquired the label and its subsidiaries via a management buyout in July 2022 and became the company's CEO.&#13;
+Head of A&amp;R from 2023: [a=Allan Nicoll] aka [a=Kid Fonque].&#13;
+Director of Music from 2024: [a=Andy Daniell].&#13;
+The label marked its 25th anniversary in 2024 with a special logo designed by [a=Trevor Jackson].&#13;
+Defected has various sublabels with separate A&amp;Rs and musical identities and owns the catalogues of a number of heritage house labels from the 1990s.&#13;
+&#13;
+[u]Current sublabels[/u]&#13;
+[l=Glitterbox Recordings] (label: [l=Glitterbox]) (A&amp;R: [a=Seamus Haji] / Director of music: [a=Melvo Baptiste])&#13;
+[l=Classic Music Company] (2010-) (label: [l=Classic]) (A&amp;R: [a=Luke Solomon])&#13;
+[l=DFTD]&#13;
+[l=D4 D4NCE]&#13;
+[l=Faith (18)] (A&amp;R: [a=Terry Farley], [a=Stuart Patterson] and [a=Dave Jarvis])&#13;
+Bad Decisions (A&amp;R: Wez Saunders)&#13;
+[l=Big Love Music] (label: [l=Big Love]) (A&amp;R: [a=Seamus Haji])&#13;
+[l=D-Vine Sounds] (A&amp;R: [a=Sam Divine])&#13;
+[l=The Remedy Project] (A&amp;R: [a=Melvo Baptiste])&#13;
+Mahaba (A&amp;R: [a=Kitty Amor])&#13;
+[l=Stay True Sounds] (A&amp;R: [a=Allan Nicoll])&#13;
+[l=One People (2)] (A&amp;R: [a=Allan Nicoll])&#13;
+[l=4 To The Floor Records] (label: [l=4 To The Floor (2)])&#13;
+[l=Faya Combo]&#13;
+[l=Nu Groove Records]&#13;
+[l=Soulfuric Recordings] (A&amp;R: [a=Seamus Haji])&#13;
+[l=Slip'N'Slide Records] (label: [l=Slip 'N' Slide])&#13;
+[l=Yoruba Records]&#13;
+[l=Fourth Floor Records] aka [l=4th Floor Records]&#13;
+[l=K4B Records]&#13;
+[l=Movin' Records]&#13;
+[l=Sub-Urban]&#13;
+&#13;
+[u]Former sublabels[/u]&#13;
+[l=ITH Records]&#13;
+[l=Soul Heaven Records]&#13;
+[l=Bargrooves]&#13;
+[l=Cyphon]&#13;
+[l=Fluential Records] (label: [l=Fluential])&#13;
+[l=M (4)]&#13;
+[l=Spectrum Records]&#13;
+[l=The Sound Of Defected]&#13;
+[l=Code Red Recordings]&#13;
+[l=Strictly Rhythm]&#13;
+[l=Sondela Recordings]&#13;
+&#13;
+[u]Series[/u]&#13;
+[l=House Masters]&#13;
+[l=Most Rated]&#13;
+[l=In The House]&#13;
+[l=For The Love Of House]&#13;
+[l=Isolation Nation]&#13;
+[l=Sampler EP]&#13;
+[l=Sessions (5)] (with [l=Ministry Of Sound])&#13;
+[l=Together (3)]&#13;
+[l=Connected (4)]&#13;
+[l=Deep Down &amp; Defected]&#13;
+[l=Defected Accapellas]&#13;
+[l=Defected Clubland Adventures]&#13;
+[l=Defected D-Fused]&#13;
+[l=Defected D-Fused &amp; Digital]&#13;
+[l=Defected In The House]&#13;
+[l=Defected Presents]</profile><data_quality>Needs Vote</data_quality><parentLabel id="272745">Defected Records Ltd.</parentLabel><urls><url>http://defected.com</url><url>http://defected.bandcamp.com</url><url>http://housemusic3.bandcamp.com</url><url>http://www.facebook.com/DefectedRecords</url><url>http://www.instagram.com/defectedrecords</url><url>http://www.linkedin.com/company/defected-records</url><url>http://linktr.ee/DefectedRecords</url><url>http://www.mixcloud.com/Defectedrecords</url><url>http://soundcloud.com/defectedrecords</url><url>http://en.wikipedia.org/wiki/Defected_Records</url><url>http://fr.wikipedia.org/wiki/Defected_Records</url><url>http://x.com/defectedrecords</url><url>http://www.youtube.com/user/DefectedMusic</url></urls><sublabels><label id="602">Slip 'n' Slide</label><label id="608">Nu Groove Records</label><label id="723">Soulfuric Recordings</label><label id="903">Fourth Floor Records</label><label id="2744">Yoruba Records</label><label id="3241">Movin' Records</label><label id="3830">4th Floor Records</label><label id="6060">Spectrum Records</label><label id="6178">Sub-Urban</label><label id="7134">K4B Records</label><label id="8721">Faya Combo</label><label id="22129">M (4)</label><label id="25167">ITH Records</label><label id="29984">In The House</label><label id="50862">Cyphon</label><label id="93694">The Sound Of Defected</label><label id="113724">Bargrooves</label><label id="146395">Big Love Music</label><label id="206317">House Masters</label><label id="281782">Classic Music Company</label><label id="339990">Fluential Records</label><label id="555650">DFTD</label><label id="656850">Defected Accapellas</label><label id="728758">Connected (4)</label><label id="782910">Defected Presents</label><label id="841559">Defected In The House</label><label id="896013">Most Rated</label><label id="995016">D-Vine Sounds</label><label id="1063405">Defected Clubland Adventures</label><label id="1212661">Glitterbox Recordings</label><label id="1283765">4 To The Floor Records</label><label id="1483260">Slip'N'Slide Records</label><label id="1678317">Stay True Sounds</label><label id="1912560">Defected D-fused &amp; Digital</label><label id="1928524">Defected D-fused</label><label id="1977915">D4 D4NCE</label><label id="2151664">Faith (18)</label><label id="2502175">Isolation Nation</label><label id="2550100">Sampler EP</label><label id="2656294">The Remedy Project</label><label id="2982793">Together (3)</label><label id="3105820">For The Love Of House</label><label id="3674980">Deep Down &amp; Defected</label><label id="3682642">One People (2)</label></sublabels></label>
+<label><id>99</id><name>Swayzak Recordings</name><data_quality>Needs Vote</data_quality><urls><url>http://www.swayzak.com</url><url>http://www.myspace.com/swayzakrecordings</url><url>https://swayzak.bandcamp.com/</url><url> </url></urls></label>
+<label><id>100</id><name>Distant Music</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label and production company based in Brooklyn, New York City.&#13;
+Run by [a=Jon Cutler] who used the alias [a=Distant Music] for his own productions and remixes.&#13;
+In addition to sub-label Remedie, Distant Music manufactured and distributed various labels in the late 1990s/early 2000s:&#13;
+[l=83 West Records] (and sub-label [l=Camouflage Recordings])&#13;
+[l=Faze Recordz]&#13;
+[l=Mad Moses Music]&#13;
+[l=Metro Trax Records]&#13;
+[l=Midnite Recordings]&#13;
+[l=Tonic Recordings]&#13;
+[l=Underground Collective Recordings]&#13;
+[l=United Underground House Sounds]</profile><data_quality>Needs Vote</data_quality><urls><url>http://www.distantusa.com</url><url>http://distantmusicnyc.bandcamp.com</url><url>http://www.facebook.com/jon.cutler1</url><url>http://www.instagram.com/distant2020</url><url>http://soundcloud.com/joncutler</url><url>http://www.youtube.com/user/distantusa</url></urls><sublabels><label id="1485">Remedie</label></sublabels></label>
+<label><id>101</id><name>Shaboom Records</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>House label based in Blackpool.
+Founded by [a=Mark Bell (3)], [a=Paul Birchall], [a=Ben Davis] and [a=Dick Johnson].</profile><data_quality>Needs Vote</data_quality><urls/><sublabels><label id="7981">Blaktrax</label><label id="17172">Shaboom America</label><label id="378871">Shaboom Black</label></sublabels></label>
+<label><id>102</id><name>Spymania</name><profile>In 1995 a crack commando unit was sent to Brighton by an arbitrary court for an EP they didn't release. These men promptly escaped from a maximum security stockade to the Essex underground. Today, still wanted by the government, they survive as soldiers of fortune. If you have a demo, if no-one else can help, and if you can find them, maybe you can hire Spymania</profile><data_quality>Needs Vote</data_quality><parentLabel id="3373">Zoom Records (2)</parentLabel><urls><url>http://www.spymania.com</url><url>https://spymania.bandcamp.com/</url></urls><sublabels><label id="104">Nothings Clear</label><label id="5821">Barry's Bootlegs</label></sublabels></label>
+<label><id>104</id><name>Nothings Clear</name><data_quality>Needs Vote</data_quality><parentLabel id="102">Spymania</parentLabel><urls/></label>
+<label><id>105</id><name>Skam</name><contactinfo>Example Records
+1 Example Street
+Email: contact@example.com</contactinfo><profile>Label established by [a=Andy Maddocks], based in Manchester, UK.</profile><data_quality>Needs Vote</data_quality><parentLabel id="344610">Skam Records</parentLabel><urls><url>http://www.facebook.com/SkamRecords</url><url>http://twitter.com/Skamrecords</url><url>http://myspace.com/skamrecordsofficial</url><url>http://myspace.com/skamsmak</url><url>https://skamrecords.bandcamp.com/</url><url>http://www.bhatoptics.com</url><url>http://en.wikipedia.org/wiki/Skam_Records</url><url>http://soundcloud.com/skam</url><url>http://www.youtube.com/user/SkamRecords</url><url>http://skam.bleepstores.com</url><url>http://skam.co.uk/</url></urls><sublabels><label id="7815">30mil Recordings</label><label id="8705">33</label><label id="22847">Skullsnap Records</label><label id="420042">SMAK</label><label id="480345">AMKS</label><label id="835972">Kasm</label></sublabels></label>
+</labels>

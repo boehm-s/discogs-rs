@@ -76,5 +76,7 @@ pub mod client;
 pub mod error;
 pub mod helpers;
 pub mod releases;
+#[cfg(feature = "xml-exports")]
+pub mod xml_exports;
 
 pub const API_BASE_URL: &str = "https://api.discogs.com";

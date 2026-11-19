@@ -32,7 +32,7 @@ pub(crate) mod track_duration {
     }
   }
 
-  fn parse(duration: &str) -> Option<Duration> {
+  pub(crate) fn parse(duration: &str) -> Option<Duration> {
     let mut seconds = 0;
     for part in duration.trim().split(':') {
       seconds = seconds * 60 + part.parse::<u64>().ok()?;

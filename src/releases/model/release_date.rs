@@ -93,12 +93,15 @@ pub(crate) struct NoDateAsNone;
 
 impl<'de> DeserializeAs<'de, Option<ReleaseDate>> for NoDateAsNone {
   fn deserialize_as<D: Deserializer<'de>>(deserializer: D) -> Result<Option<ReleaseDate>, D::Error> {
-    let date = Option::<String>::deserialize(deserializer)?;
-    Ok(
-      date
-        .filter(|date| !date.chars().all(|char| char == '0' || char == '-'))
-        .map(|date| date.parse().unwrap_or_else(|never: Infallible| match never {})),
-    )
+    Ok(Option::<String>::deserialize(deserializer)?.and_then(|date| ReleaseDate::from_discogs(&date)))
+  }
+}
+
+impl ReleaseDate {
+  /// `None` for `""`, `0`, `0000`, `0000-00-00`.
+  pub(crate) fn from_discogs(date: &str) -> Option<Self> {
+    (!date.chars().all(|char| char == '0' || char == '-'))
+      .then(|| date.parse().unwrap_or_else(|never: Infallible| match never {}))
   }
 }
 

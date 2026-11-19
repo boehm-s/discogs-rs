@@ -4,6 +4,24 @@ All notable changes to this project are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- `xml-exports` feature: monthly XML exports of the database (artists, labels, masters, releases)
+  - `ExportFile<T>`: export file of one kind of records, local or remote, gzipped or not
+    (`latest`, `from_file`), verified against its SHA-256
+  - `ExportFile::for_each_sequential` and `for_each_parallel`: records passed to a function from
+    one thread or several, remote files parsed as they download
+  - `ExportFile::download` to save a remote file first
+  - `ExportError`, as `DiscogsClientError::Export`
+- `DiscogsClientError::RateLimited`, with the `Retry-After` sent by Discogs
+
+### Changed
+
+- HTTP 429 responses are `DiscogsClientError::RateLimited` instead of `DiscogsClientError::Api`
+- Minimum supported Rust version 1.88 (quick-xml 0.42, scraper 0.29)
+
 ## [0.3.0]
 
 ### Added

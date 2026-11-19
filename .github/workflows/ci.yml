@@ -52,9 +52,9 @@ jobs:
       - name: rustfmt
         run: cargo fmt --all -- --check
       - name: clippy
-        run: cargo clippy --no-deps --tests -- -D warnings
+        run: cargo clippy --no-deps --all-targets --features xml-exports -- -D warnings
       - name: rustdoc
-        run: cargo doc --no-deps
+        run: cargo doc --no-deps --features xml-exports
         env:
           RUSTDOCFLAGS: -D warnings
 
@@ -79,10 +79,10 @@ jobs:
         with:
           tool: cargo-nextest
       - name: Unit and integration tests
-        run: cargo nextest run --cargo-profile ci --profile ci
+        run: cargo nextest run --cargo-profile ci --profile ci --features xml-exports
       # nextest does not run doctests
       - name: Doctests
-        run: cargo test --profile ci --doc
+        run: cargo test --profile ci --doc --features xml-exports
 
   msrv:
     name: MSRV
@@ -98,7 +98,7 @@ jobs:
           rustflags: ""
           override: true
       # Only the library itself: dev-dependencies are allowed to require a newer compiler
-      - run: cargo +${{ steps.msrv.outputs.version }} check --lib
+      - run: cargo +${{ steps.msrv.outputs.version }} check --lib --features xml-exports
 
   package:
     name: Package

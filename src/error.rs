@@ -1,5 +1,7 @@
 //! Errors returned by the client.
 
+use std::time::Duration;
+
 use reqwest::StatusCode;
 use serde::Deserialize;
 
@@ -17,6 +19,10 @@ pub enum DiscogsClientError {
     message: Option<String>,
   },
 
+  /// Too many requests: Discogs asks to wait `retry_after` before the next one.
+  #[error("rate limited by Discogs, retry after {retry_after:?}")]
+  RateLimited { retry_after: Option<Duration> },
+
   #[error("invalid query: {0}")]
   InvalidQuery(String),
 
@@ -25,6 +31,10 @@ pub enum DiscogsClientError {
 
   #[error("invalid user agent: Discogs requires a non-empty, printable User-Agent")]
   InvalidUserAgent,
+
+  #[cfg(feature = "xml-exports")]
+  #[error(transparent)]
+  Export(#[from] crate::xml_exports::error::ExportError),
 }
 
 /// Error body of the REST API
