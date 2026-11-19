@@ -21,6 +21,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - HTTP 429 responses are `DiscogsClientError::RateLimited` instead of `DiscogsClientError::Api`
 - Minimum supported Rust version 1.88 (quick-xml 0.42, scraper 0.29)
+- Dates use [jiff](https://docs.rs/jiff) instead of chrono, which is no longer maintained:
+  `Release::date_added` and `date_changed` are `jiff::Timestamp` (serialized in UTC), `ReleaseDate`
+  ranges are `jiff::civil::Date`
 
 ## [0.3.0]
 

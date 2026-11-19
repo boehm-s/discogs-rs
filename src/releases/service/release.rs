@@ -35,7 +35,7 @@ pub(crate) async fn fetch_release_rating_and_stats(
 mod tests {
   use std::time::Duration;
 
-  use chrono::NaiveDate;
+  use jiff::civil::date;
   use reqwest::StatusCode;
   use rust_decimal::Decimal;
   use wiremock::MockServer;
@@ -70,9 +70,12 @@ mod tests {
     assert_eq!(release.master_id, Some(MasterReleaseId::new(406_634)));
     assert_eq!(
       release.released,
-      Some(ReleaseDate::Known(
-        NaiveDate::from_ymd_opt(1969, 11, 1).unwrap()..=NaiveDate::from_ymd_opt(1969, 11, 30).unwrap()
-      ))
+      Some(ReleaseDate::Known(date(1969, 11, 1)..=date(1969, 11, 30)))
+    );
+    // `2007-01-17T11:52:25-08:00`
+    assert_eq!(
+      release.date_added,
+      Some(jiff::Timestamp::from_second(1_169_063_545).unwrap())
     );
     assert_eq!(release.estimated_weight_in_grams, Some(230));
     assert_eq!(release.lowest_price, Some(Decimal::new(178, 1)));

@@ -11,7 +11,7 @@
 //! to a function, from one thread or several:
 //!
 //! ```no_run
-//! # async fn example(last_ingested: chrono::NaiveDate) -> discogs_client::error::Result<()> {
+//! # async fn example(last_ingested: jiff::civil::Date) -> discogs_client::error::Result<()> {
 //! use discogs_client::client::Client;
 //! use discogs_client::xml_exports::client::ExportFile;
 //! use discogs_client::xml_exports::model::release::ExportRelease;

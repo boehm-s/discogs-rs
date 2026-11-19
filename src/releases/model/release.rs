@@ -1,4 +1,4 @@
-use chrono::{DateTime, FixedOffset};
+use jiff::Timestamp;
 use rust_decimal::Decimal;
 use serde::{Deserialize, Serialize};
 use serde_with::{DisplayFromStr, NoneAsEmptyString, serde_as};
@@ -55,8 +55,8 @@ pub struct Release {
   pub format_quantity: Option<u32>,
   pub data_quality: DataQuality,
   pub community: Option<Community>,
-  pub date_added: Option<DateTime<FixedOffset>>,
-  pub date_changed: Option<DateTime<FixedOffset>>,
+  pub date_added: Option<Timestamp>,
+  pub date_changed: Option<Timestamp>,
   pub num_for_sale: Option<u32>,
   /// `None` when nothing is for sale.
   pub lowest_price: Option<Decimal>,

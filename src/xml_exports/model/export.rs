@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use std::fmt::{Display, Formatter};
 
-use chrono::NaiveDate;
+use jiff::civil::Date;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, Serialize, Deserialize)]
@@ -36,7 +36,7 @@ impl Display for ExportKind {
 /// per kind of entity.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub(crate) struct Export {
-  pub(crate) date: NaiveDate,
+  pub(crate) date: Date,
   pub(crate) files: Vec<PublishedFile>,
   /// SHA-256 of the files (`discogs_20261101_CHECKSUM.txt`), once published.
   pub(crate) checksum_file: Option<String>,

@@ -122,9 +122,9 @@ pub(crate) mod tests {
   use std::io::Write as _;
   use std::time::Duration;
 
-  use chrono::NaiveDate;
   use flate2::Compression;
   use flate2::write::GzEncoder;
+  use jiff::civil::date;
 
   use super::ExportReader;
   use crate::error::{DiscogsClientError, Result};
@@ -237,9 +237,7 @@ pub(crate) mod tests {
     assert!(release.is_main_release);
     assert_eq!(
       release.released,
-      Some(ReleaseDate::Known(
-        NaiveDate::from_ymd_opt(2000, 1, 1).unwrap()..=NaiveDate::from_ymd_opt(2000, 12, 31).unwrap()
-      ))
+      Some(ReleaseDate::Known(date(2000, 1, 1)..=date(2000, 12, 31)))
     );
     assert_eq!(release.formats[0].quantity, Some(1));
     assert_eq!(release.formats[0].text, None);

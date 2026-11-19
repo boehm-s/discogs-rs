@@ -3,7 +3,7 @@
 use std::collections::BTreeMap;
 use std::sync::LazyLock;
 
-use chrono::NaiveDate;
+use jiff::civil::Date;
 use scraper::{Html, Selector};
 use tracing::instrument;
 
@@ -63,7 +63,7 @@ pub(crate) async fn fetch_checksums(client: &Client, export: &Export) -> Result<
 
 /// `data/2026/discogs_20261101_releases.xml.gz`
 pub(crate) fn download_path(export: &Export, file: &str) -> String {
-  format!("data/{}/{file}", export.date.format("%Y"))
+  format!("data/{:04}/{file}", export.date.year())
 }
 
 async fn fetch_text(client: &Client, query: &[(&str, &str)]) -> Result<String> {
@@ -113,7 +113,7 @@ pub(crate) fn parse_exports(page: &str) -> Result<Vec<Export>> {
   if paths.is_empty() {
     return Err(ExportError::NotFound("no export listed".to_owned()).into());
   }
-  let mut exports: BTreeMap<NaiveDate, Export> = BTreeMap::new();
+  let mut exports: BTreeMap<Date, Export> = BTreeMap::new();
   for path in paths {
     let name = path.rsplit_once('/').map_or(path.as_str(), |(_, name)| name);
     let (date, kind) = parse_file_name(name).ok_or_else(|| invalid(format!("unexpected file `{path}`")))?;
@@ -134,9 +134,9 @@ pub(crate) fn parse_exports(page: &str) -> Result<Vec<Export>> {
 }
 
 /// Date and kind of an export file, no kind for the checksums
-fn parse_file_name(name: &str) -> Option<(NaiveDate, Option<ExportKind>)> {
+fn parse_file_name(name: &str) -> Option<(Date, Option<ExportKind>)> {
   let (date, suffix) = name.strip_prefix("discogs_")?.split_once('_')?;
-  let date = NaiveDate::parse_from_str(date, "%Y%m%d").ok()?;
+  let date = Date::strptime("%Y%m%d", date).ok()?;
   if suffix == "CHECKSUM.txt" {
     return Some((date, None));
   }

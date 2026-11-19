@@ -9,7 +9,7 @@ use std::sync::atomic::{AtomicBool, Ordering};
 use std::thread;
 use std::time::{Duration, Instant};
 
-use chrono::NaiveDate;
+use jiff::civil::Date;
 use tokio::sync::oneshot;
 use tracing::instrument;
 use url::Url;
@@ -127,7 +127,7 @@ pub struct ExportStats {
 pub struct ExportFile<T> {
   location: ExportLocation,
   sha256: Option<String>,
-  date: Option<NaiveDate>,
+  date: Option<Date>,
   /// Only the type of the records: `fn() -> T` keeps the file `Send` and `Sync` whatever `T`
   record: PhantomData<fn() -> T>,
 }
@@ -185,7 +185,7 @@ impl<T: ExportRecord> ExportFile<T> {
   }
 
   /// Date of the export, for [`latest`](Self::latest).
-  pub fn date(&self) -> Option<NaiveDate> {
+  pub fn date(&self) -> Option<Date> {
     self.date
   }
 
@@ -331,7 +331,7 @@ mod tests {
   use std::sync::{Arc, Mutex};
   use std::time::Duration;
 
-  use chrono::NaiveDate;
+  use jiff::civil::date;
   use reqwest::header::AUTHORIZATION;
   use sha2::{Digest as _, Sha256};
   use wiremock::{MockServer, ResponseTemplate};
@@ -429,7 +429,7 @@ mod tests {
       .await
       .unwrap();
 
-    assert_eq!(file.date(), NaiveDate::from_ymd_opt(2026, 11, 1));
+    assert_eq!(file.date(), Some(date(2026, 11, 1)));
     assert_eq!(
       file.sha256.as_deref(),
       Some("75eb03aeb1d03a07797ffdcb57a4b81c87cf10955353c800fa7b6bc86aac1d67")
@@ -460,7 +460,7 @@ mod tests {
       .await
       .unwrap();
 
-    assert_eq!(file.date(), NaiveDate::from_ymd_opt(2026, 11, 1));
+    assert_eq!(file.date(), Some(date(2026, 11, 1)));
     assert_eq!(file.sha256, None);
   }
 
@@ -666,7 +666,8 @@ mod tests {
   }
 }
 
-#[cfg(all(test, feature = "live-tests"))]
+#[cfg(test)]
+#[cfg(feature = "live-tests")]
 mod live_tests {
   use crate::auth::test_helper::USER_AGENT;
   use crate::client::Client;
