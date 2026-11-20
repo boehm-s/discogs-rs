@@ -2,10 +2,11 @@
 //! to [`Client`] in its own `client.rs`.
 
 use std::sync::Arc;
+use std::time::Duration;
 
 use oauth1_request::ParameterList;
-use reqwest::header::{AUTHORIZATION, HeaderValue, USER_AGENT};
-use reqwest::{Method, RequestBuilder, Response};
+use reqwest::header::{AUTHORIZATION, HeaderValue, RETRY_AFTER, USER_AGENT};
+use reqwest::{Method, RequestBuilder, Response, StatusCode};
 use serde::Serialize;
 use serde::de::DeserializeOwned;
 use tracing::{Span, instrument};
@@ -28,6 +29,8 @@ struct Inner {
   /// Without trailing slash
   base_url: String,
   auth: Authentication,
+  #[cfg(feature = "xml-exports")]
+  exports_url: String,
 }
 
 impl Client {
@@ -38,6 +41,8 @@ impl Client {
       user_agent: user_agent.into(),
       auth: Authentication::None,
       base_url: API_BASE_URL.to_owned(),
+      #[cfg(feature = "xml-exports")]
+      exports_url: crate::xml_exports::EXPORTS_URL.to_owned(),
       http: None,
     }
   }
@@ -83,12 +88,51 @@ impl Client {
     }
   }
 
+  /// Request to the exports server (data.discogs.com), never authenticated: the credentials are
+  /// for the API only.
+  #[cfg(feature = "xml-exports")]
+  pub(crate) fn exports_request(&self, query: &[(&str, &str)]) -> RequestBuilder {
+    self
+      .inner
+      .http
+      .get(&self.inner.exports_url)
+      .query(query)
+      .header(USER_AGENT, self.inner.user_agent.clone())
+  }
+
+  /// URL of a file of the exports server (`data/2026/discogs_20261101_releases.xml.gz`).
+  #[cfg(feature = "xml-exports")]
+  pub(crate) fn exports_file_url(&self, path: &str) -> Result<url::Url> {
+    let mut url = url::Url::parse(&self.inner.exports_url)
+      .map_err(|error| crate::xml_exports::error::ExportError::InvalidOptions(error.to_string()))?;
+    url.query_pairs_mut().append_pair("download", path);
+    Ok(url)
+  }
+
+  /// Download of a file, never authenticated: the credentials are for the API only.
+  #[cfg(feature = "xml-exports")]
+  pub(crate) fn file_request(&self, url: url::Url) -> RequestBuilder {
+    self
+      .inner
+      .http
+      .get(url)
+      .header(USER_AGENT, self.inner.user_agent.clone())
+  }
+
   /// Sends a REST request, turning error statuses into [`DiscogsClientError::Api`].
   pub(crate) async fn send(request: RequestBuilder) -> Result<Response> {
     let response = Self::execute(request).await?;
     let status = response.status();
     if status.is_success() {
       return Ok(response);
+    }
+    if status == StatusCode::TOO_MANY_REQUESTS {
+      let retry_after = response
+        .headers()
+        .get(RETRY_AFTER)
+        .and_then(|value| value.to_str().ok()?.parse().ok())
+        .map(Duration::from_secs);
+      return Err(DiscogsClientError::RateLimited { retry_after });
     }
     // Error pages of proxies (e.g. 502) are not JSON: no message then
     let message = response.json::<ApiErrorBody>().await.ok().and_then(|body| body.message);
@@ -119,6 +163,8 @@ pub struct ClientBuilder {
   user_agent: String,
   auth: Authentication,
   base_url: String,
+  #[cfg(feature = "xml-exports")]
+  exports_url: String,
   http: Option<reqwest::Client>,
 }
 
@@ -151,6 +197,12 @@ impl ClientBuilder {
     self
   }
 
+  #[cfg(all(test, feature = "xml-exports"))]
+  pub(crate) fn exports_url(mut self, exports_url: impl Into<String>) -> Self {
+    self.exports_url = exports_url.into();
+    self
+  }
+
   /// Uses a preconfigured `reqwest` client (timeouts, proxy…). The user agent is still set on
   /// each request.
   pub fn http_client(mut self, http: reqwest::Client) -> Self {
@@ -178,6 +230,8 @@ impl ClientBuilder {
         user_agent,
         base_url: self.base_url.trim_end_matches('/').to_owned(),
         auth: self.auth,
+        #[cfg(feature = "xml-exports")]
+        exports_url: self.exports_url,
       }),
     })
   }

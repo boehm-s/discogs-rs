@@ -3,7 +3,7 @@ use std::fmt::{Display, Formatter};
 use std::ops::RangeInclusive;
 use std::str::FromStr;
 
-use chrono::{Datelike as _, Months, NaiveDate};
+use jiff::civil::Date;
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
 use serde_with::DeserializeAs;
 
@@ -13,20 +13,19 @@ use serde_with::DeserializeAs;
 /// Serialized in ISO 8601: `1969-10-10`, `1969-11`, `1969`, or an interval `1969-11-01/1970-02-28`.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum ReleaseDate {
-  Known(RangeInclusive<NaiveDate>),
+  Known(RangeInclusive<Date>),
   /// Not a date Discogs usually writes, kept as is.
   Unknown(String),
 }
 
 impl ReleaseDate {
-  fn year(year: i32) -> Option<RangeInclusive<NaiveDate>> {
-    Some(NaiveDate::from_ymd_opt(year, 1, 1)?..=NaiveDate::from_ymd_opt(year, 12, 31)?)
+  fn year(year: i16) -> Option<RangeInclusive<Date>> {
+    Some(Date::new(year, 1, 1).ok()?..=Date::new(year, 12, 31).ok()?)
   }
 
-  fn month(year: i32, month: u32) -> Option<RangeInclusive<NaiveDate>> {
-    let start = NaiveDate::from_ymd_opt(year, month, 1)?;
-    let end = start.checked_add_months(Months::new(1))?.pred_opt()?;
-    Some(start..=end)
+  fn month(year: i16, month: i8) -> Option<RangeInclusive<Date>> {
+    let start = Date::new(year, month, 1).ok()?;
+    Some(start..=start.last_of_month())
   }
 
   fn parse(date: &str) -> Option<Self> {
@@ -40,7 +39,7 @@ impl ReleaseDate {
 
   /// `YYYY-MM-DD`, `YYYY-MM` or `YYYY`, `00` meaning an unknown month or day. Years are written
   /// with 4 digits; Discogs has typos like `197` or `0000-12-25`.
-  fn parse_one(date: &str) -> Option<RangeInclusive<NaiveDate>> {
+  fn parse_one(date: &str) -> Option<RangeInclusive<Date>> {
     let mut parts = date.split('-');
     let year = parts.next()?;
     if year.len() != 4 || year.starts_with('0') {
@@ -55,7 +54,7 @@ impl ReleaseDate {
     match (month, day) {
       (0, _) => Self::year(year),
       (month, 0) => Self::month(year, month),
-      (month, day) => NaiveDate::from_ymd_opt(year, month, day).map(|day| day..=day),
+      (month, day) => Date::new(year, month, day).ok().map(|day| day..=day),
     }
   }
 }
@@ -77,13 +76,13 @@ impl Display for ReleaseDate {
     };
     let (start, end) = (days.start(), days.end());
     if start == end {
-      write!(f, "{}", start.format("%Y-%m-%d"))
+      write!(f, "{start}")
     } else if Self::year(start.year()).as_ref() == Some(days) {
-      write!(f, "{}", start.format("%Y"))
+      write!(f, "{:04}", start.year())
     } else if Self::month(start.year(), start.month()).as_ref() == Some(days) {
-      write!(f, "{}", start.format("%Y-%m"))
+      write!(f, "{:04}-{:02}", start.year(), start.month())
     } else {
-      write!(f, "{}/{}", start.format("%Y-%m-%d"), end.format("%Y-%m-%d"))
+      write!(f, "{start}/{end}")
     }
   }
 }
@@ -93,12 +92,15 @@ pub(crate) struct NoDateAsNone;
 
 impl<'de> DeserializeAs<'de, Option<ReleaseDate>> for NoDateAsNone {
   fn deserialize_as<D: Deserializer<'de>>(deserializer: D) -> Result<Option<ReleaseDate>, D::Error> {
-    let date = Option::<String>::deserialize(deserializer)?;
-    Ok(
-      date
-        .filter(|date| !date.chars().all(|char| char == '0' || char == '-'))
-        .map(|date| date.parse().unwrap_or_else(|never: Infallible| match never {})),
-    )
+    Ok(Option::<String>::deserialize(deserializer)?.and_then(|date| ReleaseDate::from_discogs(&date)))
+  }
+}
+
+impl ReleaseDate {
+  /// `None` for `""`, `0`, `0000`, `0000-00-00`.
+  pub(crate) fn from_discogs(date: &str) -> Option<Self> {
+    (!date.chars().all(|char| char == '0' || char == '-'))
+      .then(|| date.parse().unwrap_or_else(|never: Infallible| match never {}))
   }
 }
 
@@ -117,24 +119,21 @@ impl<'de> Deserialize<'de> for ReleaseDate {
 
 #[cfg(test)]
 mod tests {
-  use chrono::NaiveDate;
+  use jiff::civil::{Date, date};
 
   use super::ReleaseDate;
 
-  fn date(year: i32, month: u32, day: u32) -> NaiveDate {
-    NaiveDate::from_ymd_opt(year, month, day).unwrap()
+  fn known(start: Date, end: Date) -> ReleaseDate {
+    ReleaseDate::Known(start..=end)
   }
 
   #[test]
   fn parse_discogs_dates() {
     let cases = [
-      (
-        "1969-10-10",
-        ReleaseDate::Known(date(1969, 10, 10)..=date(1969, 10, 10)),
-      ),
-      ("1969-11-00", ReleaseDate::Known(date(1969, 11, 1)..=date(1969, 11, 30))),
-      ("1969-00-00", ReleaseDate::Known(date(1969, 1, 1)..=date(1969, 12, 31))),
-      ("1969", ReleaseDate::Known(date(1969, 1, 1)..=date(1969, 12, 31))),
+      ("1969-10-10", known(date(1969, 10, 10), date(1969, 10, 10))),
+      ("1969-11-00", known(date(1969, 11, 1), date(1969, 11, 30))),
+      ("1969-00-00", known(date(1969, 1, 1), date(1969, 12, 31))),
+      ("1969", known(date(1969, 1, 1), date(1969, 12, 31))),
       ("Unknown", ReleaseDate::Unknown("Unknown".to_owned())),
       ("197", ReleaseDate::Unknown("197".to_owned())),
       ("0338", ReleaseDate::Unknown("0338".to_owned())),
@@ -157,7 +156,7 @@ mod tests {
     for (discogs, iso) in cases {
       assert_eq!(discogs.parse::<ReleaseDate>().unwrap().to_string(), iso, "{discogs}");
     }
-    let interval = ReleaseDate::Known(date(1969, 11, 15)..=date(1970, 2, 28));
+    let interval = known(date(1969, 11, 15), date(1970, 2, 28));
     assert_eq!(interval.to_string(), "1969-11-15/1970-02-28");
   }
 

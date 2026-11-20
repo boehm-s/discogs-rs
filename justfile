@@ -10,16 +10,16 @@ build *ARGS:
 
 # Check the code (including tests)
 check:
-    cargo check --tests
+    cargo check --tests --features xml-exports
 
 # Run unit tests and doctests
 test *ARGS:
-    cargo nextest run --failure-output final --success-output never {{ ARGS }}
-    cargo test --doc
+    cargo nextest run --features xml-exports --failure-output final --success-output never {{ ARGS }}
+    cargo test --doc --features xml-exports
 
 # Run the tests against the real Discogs API (needs DISCOGS_TOKEN in .env)
 test-live *ARGS:
-    cargo nextest run --features live-tests -E 'test(live_tests)' {{ ARGS }}
+    cargo nextest run --features live-tests,xml-exports -E 'test(live_tests)' {{ ARGS }}
 
 # Format the code
 fmt:
@@ -28,9 +28,9 @@ fmt:
 # Run every check done by the CI lint job
 lint:
     cargo fmt --all -- --check
-    cargo clippy --no-deps --tests -- -D warnings
+    cargo clippy --no-deps --all-targets --features xml-exports -- -D warnings
     cargo deny check --hide-inclusion-graph licenses sources advisories bans
-    RUSTDOCFLAGS="-D warnings" cargo doc --no-deps
+    RUSTDOCFLAGS="-D warnings" cargo doc --no-deps --features xml-exports
 
 # Check the public API against the latest version published on crates.io
 semver:
@@ -38,7 +38,7 @@ semver:
 
 # Build and open the documentation
 doc:
-    cargo doc --no-deps --open
+    cargo doc --no-deps --features xml-exports --open
 
 # Check that the crate can be packaged for crates.io
 package:

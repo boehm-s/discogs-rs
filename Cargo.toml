@@ -2,7 +2,7 @@
 name = "discogs-client"
 version = "0.3.0"
 edition = "2024"
-rust-version = "1.85"
+rust-version = "1.88"
 description = "Ergonomic, async Rust client for the Discogs API"
 authors = ["Steven BOEHM"]
 license = "MIT"
@@ -19,21 +19,31 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [features]
+# Download and parse the monthly XML exports of the Discogs database (data.discogs.com)
+xml-exports = ["dep:bytes", "dep:flate2", "dep:memchr", "dep:quick-xml", "dep:scraper", "dep:sha2", "dep:tokio", "reqwest/stream"]
 # Tests against the real Discogs API (`just test-live`), never run in the CI
 live-tests = []
 
 [dependencies]
-chrono = { version = "0.4", default-features = false, features = ["serde", "std"] }
+bytes = { version = "1", optional = true }
+# zlib-rs: fastest pure Rust backend, no C toolchain needed
+flate2 = { version = "1", default-features = false, features = ["zlib-rs"], optional = true }
 futures-util = { version = "0.3", default-features = false }
+jiff = { version = "0.2.43", default-features = false, features = ["serde", "std"] }
+memchr = { version = "2", optional = true }
 mime = "0.3"
 oauth1-request = { version = "0.6", default-features = false, features = ["std", "hmac-sha1"] }
+quick-xml = { version = "0.42", optional = true }
 reqwest = { version = "0.13", features = ["json", "form", "query"] }
 rust_decimal = "1"
+scraper = { version = "0.29", optional = true }
 secrecy = { version = "0.10", features = ["serde"] }
 serde = { version = "1", features = ["derive"] }
 serde_urlencoded = "0.7"
 serde_with = { version = "3", default-features = false, features = ["macros", "std"] }
+sha2 = { version = "0.11", optional = true }
 thiserror = "2"
+tokio = { version = "1", features = ["fs", "io-util", "rt", "sync"], optional = true }
 tracing = { version = "0.1", features = ["attributes"] }
 url = "2"
 
@@ -41,6 +51,10 @@ url = "2"
 serde_json = "1"
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 wiremock = "0.6"
+
+[[example]]
+name = "parse_export"
+required-features = ["xml-exports"]
 
 # Used by CI (`cargo nextest run --cargo-profile ci`): faster builds, still usable backtraces
 [profile.ci]
