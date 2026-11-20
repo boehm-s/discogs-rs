@@ -66,6 +66,10 @@
 //! # }
 //! ```
 //!
+//! # Features
+//!
+//! - `xml-exports`: monthly XML exports of the whole database (`xml_exports` module).
+//!
 //! # Tracing
 //!
 //! Endpoint calls and HTTP requests emit [`tracing`](https://docs.rs/tracing) spans (method, URL,
